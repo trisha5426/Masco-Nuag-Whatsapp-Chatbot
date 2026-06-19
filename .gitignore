@@ -1,0 +1,18 @@
+# Secrets - NEVER commit these
+.env
+serviceAccountKey.json
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

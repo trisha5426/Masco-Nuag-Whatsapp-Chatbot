@@ -1,0 +1,123 @@
+
+{
+  "greet": "🌾 Hi! Welcome to MASCO NuAg Farmer Support.\nPlease select your language:\n\n1. English\n2. हिन्दी",
+
+  "english": {
+    "main": {
+      "prompt": "Please select a category:",
+      "parent": "main",
+      "options": {
+        "1": { "label": "Product Information", "next": "productInfo" },
+        "2": { "label": "Product Complaint",   "next": "complaint"   },
+        "3": { "label": "Crop Health Solution","next": "cropHealth"  },
+        "4": { "label": "Nearest Dealer",      "next": "dealer"      },
+        "5": { "label": "Other Support",       "next": "otherSupport"}
+      }
+    }
+  },
+
+  "hindi": {
+    "main": {
+      "prompt": "कृपया विषय चुनें:",
+      "parent": "main",
+      "options": {
+        "1": { "label": "उत्पाद जानकारी",      "next": "productInfo" },
+        "2": { "label": "शिकायत दर्ज करें",     "next": "complaint"   },
+        "3": { "label": "फसल स्वास्थ्य समाधान", "next": "cropHealth"  },
+        "4": { "label": "नजदीकी डीलर",          "next": "dealer"      },
+        "5": { "label": "अन्य सहायता",          "next": "otherSupport"}
+      }
+    }
+  },
+
+  "products": {
+    "nitro-plus": {
+      "displayName": "Nitro-Plus",
+      "about": "Nitro-Plus is a high-efficiency nitrogen fertilizer for wheat, rice, and cotton. Boosts vegetative growth and leaf greening.",
+      "usage": "Apply as top dressing after irrigation. No mixing required for soil application.",
+      "dosage": "25 kg per acre, split into 2 applications during the season.",
+      "precautions": "Wear gloves while handling. Store in a dry place. Keep away from children."
+    },
+    "pestguard": {
+      "displayName": "PestGuard",
+      "about": "PestGuard is a broad-spectrum systemic insecticide effective against aphids, bollworms, and stem borers.",
+      "usage": "Spray in early morning or evening. Avoid spraying during flowering stage.",
+      "dosage": "2ml per litre of water, spray 200 litres per acre.",
+      "precautions": "Wear a mask and gloves. Do not spray near water bodies. Re-entry after 24 hours."
+    },
+    "fungishield": {
+      "displayName": "FungiShield",
+      "about": "FungiShield is a broad-spectrum fungicide for rust, blast, and blight diseases.",
+      "usage": "Spray at first sign of infection, repeat after 10-15 days if needed.",
+      "dosage": "1ml per litre of water.",
+      "precautions": "Avoid spraying before rain. Wear protective gear."
+    },
+    "mag-rich": {
+      "displayName": "Mag-Rich",
+      "about": "Mag-Rich is a magnesium supplement that corrects lower-leaf yellowing in wheat, rice, and vegetables.",
+      "usage": "Foliar spray for quick correction, or soil application for long-term supply.",
+      "dosage": "1% solution (10g per litre) for spray, or 5 kg/acre as soil application.",
+      "precautions": "Do not mix with alkaline products. Store in a cool, dry place."
+    },
+    "bollguard": {
+      "displayName": "BollGuard",
+      "about": "BollGuard is a targeted insecticide for bollworm control in cotton.",
+      "usage": "Spray in the evening. Combine with pheromone traps for best results.",
+      "dosage": "0.4g per litre of water.",
+      "precautions": "Keep away from beneficial insects like bees. Wear gloves and mask."
+    },
+    "default": {
+      "displayName": "this product",
+      "about": "We don't have detailed information on this product yet in our system. Please contact our helpline for assistance: 1800-XXX-XXXX",
+      "usage": "Please contact our helpline for usage instructions: 1800-XXX-XXXX",
+      "dosage": "Please contact our helpline for dosage information: 1800-XXX-XXXX",
+      "precautions": "Please contact our helpline for safety information: 1800-XXX-XXXX"
+    }
+  },
+
+  "crops": {
+    "wheat": {
+      "displayName": "Wheat",
+      "pesticide": "For Wheat pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre | Spray in evening hours",
+      "nutrition": "For Wheat nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus\nDosage: 25 kg/acre as top dressing"
+    },
+    "rice": {
+      "displayName": "Rice",
+      "pesticide": "For Rice pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre | Spray after draining field water",
+      "nutrition": "For Rice nutrition, we recommend:\n👉 MASCO NuAg Iron-Rich + Nitro-Plus\nDosage: As per soil test recommendation"
+    },
+    "cotton": {
+      "displayName": "Cotton",
+      "pesticide": "For Cotton pest issues, we recommend:\n👉 MASCO NuAg BollGuard\nDosage: 0.4g per litre | Set up pheromone traps",
+      "nutrition": "For Cotton nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus + Mag-Rich\nDosage: As per soil test recommendation"
+    },
+    "tomato": {
+      "displayName": "Tomato",
+      "pesticide": "For Tomato pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre, spray every 10-12 days",
+      "nutrition": "For Tomato nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus\nDosage: 30 kg DAP + 25 kg Urea per acre"
+    },
+    "default": {
+      "displayName": "your crop",
+      "pesticide": "We don't have a specific recommendation yet. Please contact our crop expert: 1800-XXX-XXXX",
+      "nutrition": "We don't have a specific recommendation yet. Please contact our crop expert: 1800-XXX-XXXX"
+    }
+  },
+
+  "dealers": {
+    "302001": {
+      "name": "Sharma Agro Center",
+      "address": "Near Bus Stand, Jaipur, Rajasthan",
+      "phone": "+91-9876543210"
+    },
+    "110001": {
+      "name": "Delhi Krishi Bhandar",
+      "address": "Main Market, Connaught Place, New Delhi",
+      "phone": "+91-9876543211"
+    },
+    "default": {
+      "name": "MASCO NuAg Authorized Dealer",
+      "address": "Please call our helpline to find the exact address in your area",
+      "phone": "1800-XXX-XXXX"
+    }
+  }
+}
