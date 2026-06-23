@@ -8,8 +8,8 @@ exports.getNextResponse = async (input, session, phone) => {
   let updatedSession = { ...session };
 
   // ── Global commands ──
-  if (iLower === 'restart' || !session.currentStep || session.currentStep === 'start') {
-    updatedSession = { language: null, currentStep: 'lang' };
+if (iLower === 'restart' || iLower === 'hi' || iLower === 'hello' || !session.currentStep || session.currentStep === 'start') {
+    updatedSession = { language: null, currentStep: 'lang', formData: {} };
     reply = tree.greet;
     return { reply, updatedSession };
   }
@@ -17,7 +17,8 @@ exports.getNextResponse = async (input, session, phone) => {
   if (iLower === '00') {
     updatedSession.currentStep = 'main';
     updatedSession.formData = {};
-    reply = buildMenu(tree[session.language || 'english'].main);
+    const lang = session.language || 'english';
+    reply = buildMenu(tree[lang].main);
     return { reply, updatedSession };
   }
 
@@ -41,107 +42,81 @@ exports.getNextResponse = async (input, session, phone) => {
   const step = session.currentStep;
 
   // ── Main menu ──
-  if (step === 'main') {
-    return handleMainMenu(i, updatedSession, lang);
-  }
+  if (step === 'main') return handleMainMenu(i, updatedSession, lang);
 
-  // ── PRODUCT INFORMATION FLOW ──
-  if (step === 'productInfo_awaitName') {
-    return handleProductInfoName(i, updatedSession, lang);
-  }
-  if (step === 'productInfo_subMenu') {
-    return handleProductInfoSubMenu(i, updatedSession, lang);
-  }
+  // ── PRODUCT INFORMATION ──
+  if (step === 'productInfo_awaitName') return handleProductInfoName(i, updatedSession, lang);
+  if (step === 'productInfo_subMenu')   return handleProductInfoSubMenu(i, updatedSession, lang);
 
-  // ── PRODUCT COMPLAINT FLOW ──
-  if (step === 'complaint_awaitProductName') {
-    return handleComplaintProductName(i, updatedSession, lang);
-  }
-  if (step === 'complaint_awaitType') {
-    return handleComplaintType(i, updatedSession, lang);
-  }
+  // ── PRODUCT COMPLAINT ──
+  if (step === 'complaint_awaitProductName') return handleComplaintProductName(i, updatedSession, lang);
+  if (step === 'complaint_awaitType')        return handleComplaintType(i, updatedSession, lang);
   if (step === 'complaint_awaitName') {
     updatedSession.formData.name = i;
     updatedSession.currentStep = 'complaint_awaitMobile';
-    reply = 'Please enter your mobile number.';
-    return { reply, updatedSession };
+    return { reply: 'Please enter your mobile number.', updatedSession };
   }
   if (step === 'complaint_awaitMobile') {
     updatedSession.formData.mobile = i;
     updatedSession.currentStep = 'complaint_awaitPincode';
-    reply = 'Please enter the store pincode where you purchased the product.';
-    return { reply, updatedSession };
+    return { reply: 'Please enter the store pincode where you purchased the product.', updatedSession };
   }
   if (step === 'complaint_awaitPincode') {
     updatedSession.formData.pincode = i;
     updatedSession.currentStep = 'complaint_awaitDate';
-    reply = 'Please enter the date of purchase (e.g. 10-June-2026).';
-    return { reply, updatedSession };
+    return { reply: 'Please enter the date of purchase (e.g. 10-June-2026).', updatedSession };
   }
   if (step === 'complaint_awaitDate') {
     updatedSession.formData.date = i;
     updatedSession.currentStep = 'complaint_awaitBillNo';
-    reply = 'Please enter your bill number / receipt number.';
-    return { reply, updatedSession };
+    return { reply: 'Please enter your bill number / receipt number.', updatedSession };
   }
   if (step === 'complaint_awaitBillNo') {
     updatedSession.formData.billNo = i;
     return await finishComplaint(phone, updatedSession, lang);
   }
 
-  // ── CROP HEALTH FLOW ──
-  if (step === 'cropHealth_awaitCropName') {
-    return handleCropName(i, updatedSession, lang);
-  }
-  if (step === 'cropHealth_awaitType') {
-    return handleCropType(i, updatedSession, lang);
-  }
-  if (step === 'cropHealth_awaitNextAction') {
-    return handleCropNextAction(i, updatedSession, lang);
-  }
-  if (step === 'cropHealth_awaitPincode') {
-    return handleDealerLookup(i, updatedSession, lang, 'cropHealth_done');
-  }
+  // ── CROP HEALTH ──
+  if (step === 'cropHealth_mainMenu')      return handleCropHealthMenu(i, updatedSession, lang);
+  if (step === 'cropHealth_protectionMenu') return handleCropProtectionMenu(i, updatedSession, lang);
+  if (step === 'cropHealth_awaitCropName') return handleCropName(i, updatedSession, lang);
+  if (step === 'cropHealth_awaitNextAction') return handleCropNextAction(i, updatedSession, lang);
+  if (step === 'cropHealth_awaitPincode')  return handleDealerLookup(i, updatedSession, lang);
 
-  // ── NEAREST DEALER FLOW ──
-  if (step === 'dealer_awaitPincode') {
-    return handleDealerLookup(i, updatedSession, lang, 'dealer_done');
-  }
+  // ── NEAREST DEALER ──
+  if (step === 'dealer_awaitPincode') return handleDealerLookup(i, updatedSession, lang);
 
-  // ── OTHER SUPPORT FLOW ──
+  // ── OTHER SUPPORT ──
   if (step === 'otherSupport_awaitName') {
     updatedSession.formData.name = i;
     updatedSession.currentStep = 'otherSupport_awaitMobile';
-    reply = 'Please enter your mobile number.';
-    return { reply, updatedSession };
+    return { reply: 'Please enter your mobile number.', updatedSession };
   }
   if (step === 'otherSupport_awaitMobile') {
     updatedSession.formData.mobile = i;
     updatedSession.currentStep = 'otherSupport_awaitCity';
-    reply = 'Please enter your city.';
-    return { reply, updatedSession };
+    return { reply: 'Please enter your city.', updatedSession };
   }
   if (step === 'otherSupport_awaitCity') {
     updatedSession.formData.city = i;
     updatedSession.currentStep = 'otherSupport_awaitComment';
-    reply = "Please enter your comment or query (type 'skip' to skip this step).";
-    return { reply, updatedSession };
+    return { reply: "Please enter your comment or query.\n(Type 'skip' to skip this step)", updatedSession };
   }
   if (step === 'otherSupport_awaitComment') {
     updatedSession.formData.comment = iLower === 'skip' ? '(no comment)' : i;
     return await finishOtherSupport(phone, updatedSession, lang);
   }
 
-  // ── Fallback: unknown step, go to main menu ──
+  // ── Fallback ──
   updatedSession.currentStep = 'main';
   updatedSession.formData = {};
   reply = buildMenu(tree[lang].main);
   return { reply, updatedSession };
 };
 
-// ════════════════════════════════════════════
-// MAIN MENU ROUTER
-// ════════════════════════════════════════════
+// ═══════════════════════════════
+// MAIN MENU
+// ═══════════════════════════════
 function handleMainMenu(i, session, lang) {
   let reply = '';
   if (i === '1') {
@@ -152,11 +127,11 @@ function handleMainMenu(i, session, lang) {
     session.formData = {};
     reply = 'Please type the name of the product you are complaining about.';
   } else if (i === '3') {
-    session.currentStep = 'cropHealth_awaitCropName';
-    reply = 'Please type the name of your crop.';
+    session.currentStep = 'cropHealth_mainMenu';
+    reply = 'Please select:\n\n1. Crop Nutrition\n2. Crop Deficiency\n3. Crop Protection\n\n0. Go back | 00. Main menu';
   } else if (i === '4') {
     session.currentStep = 'dealer_awaitPincode';
-    reply = 'Please enter your pincode to find the nearest MASCO NuAg dealer.';
+    reply = 'Please enter your pincode to find MASCO NuAg dealers in your state.';
   } else if (i === '5') {
     session.currentStep = 'otherSupport_awaitName';
     session.formData = {};
@@ -167,9 +142,9 @@ function handleMainMenu(i, session, lang) {
   return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 // 1. PRODUCT INFORMATION
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 function handleProductInfoName(i, session, lang) {
   session.formData = { productName: i };
   session.currentStep = 'productInfo_subMenu';
@@ -180,11 +155,10 @@ function handleProductInfoName(i, session, lang) {
 function handleProductInfoSubMenu(i, session, lang) {
   const productKey = (session.formData.productName || '').toLowerCase().trim();
   const product = tree.products[productKey] || tree.products.default;
-  let reply = '';
-
   const map = { '1': 'about', '2': 'usage', '3': 'dosage', '4': 'precautions' };
+  let reply = '';
   if (map[i]) {
-    reply = `${product[map[i]]}\n\n---\nReply 0 to go back | 00 for Main Menu | restart to start over`;
+    reply = `${product[map[i]]}\n\n---\nReply 0 to go back | 00 for Main Menu`;
   } else if (i === '0') {
     session.currentStep = 'productInfo_awaitName';
     reply = 'Please type the name of the product you want information about.';
@@ -195,9 +169,9 @@ function handleProductInfoSubMenu(i, session, lang) {
   return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 // 2. PRODUCT COMPLAINT
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 function handleComplaintProductName(i, session, lang) {
   session.formData = { productName: i };
   session.currentStep = 'complaint_awaitType';
@@ -207,9 +181,7 @@ function handleComplaintProductName(i, session, lang) {
 
 function handleComplaintType(i, session, lang) {
   const types = { '1': 'Effectiveness issue', '2': 'Damaged packaging', '3': 'Expired product', '4': 'Other issue' };
-  if (!types[i]) {
-    return { reply: 'Invalid option. Please reply 1, 2, 3, or 4.', updatedSession: session };
-  }
+  if (!types[i]) return { reply: 'Invalid option. Please reply 1, 2, 3, or 4.', updatedSession: session };
   session.formData.complaintType = types[i];
   session.currentStep = 'complaint_awaitName';
   return { reply: 'Please enter your full name.', updatedSession: session };
@@ -218,106 +190,125 @@ function handleComplaintType(i, session, lang) {
 async function finishComplaint(phone, session, lang) {
   const data = session.formData;
   await saveComplaint(phone, data);
-
-  const reply = `Thank you! Your complaint has been registered successfully.\n\nWe will contact you within 24-48 hours.\n\nYour complaint summary:\n• Product: ${data.productName}\n• Type: ${data.complaintType}\n• Name: ${data.name}\n• Mobile: ${data.mobile}\n• Pincode: ${data.pincode}\n• Date: ${data.date}\n• Bill No: ${data.billNo}\n\nReply 00 for Main Menu`;
-
+  const reply = `✅ Thank you! Your complaint has been registered.\n\nWe will contact you within 24-48 hours.\n\nSummary:\n• Product: ${data.productName}\n• Type: ${data.complaintType}\n• Name: ${data.name}\n• Mobile: ${data.mobile}\n• Pincode: ${data.pincode}\n• Date: ${data.date}\n• Bill No: ${data.billNo}\n\nReply 00 for Main Menu`;
   session.currentStep = 'main';
   session.formData = {};
   return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 // 3. CROP HEALTH SOLUTION
-// ════════════════════════════════════════════
-function handleCropName(i, session, lang) {
-  session.formData = { cropName: i };
-  session.currentStep = 'cropHealth_awaitType';
-  const reply = `Crop: ${i}\nPlease select what you need:\n\n1. Pesticide recommendation\n2. Nutrition / Fertilizer recommendation`;
-  return { reply, updatedSession: session };
+// ═══════════════════════════════
+function handleCropHealthMenu(i, session, lang) {
+  if (i === '1') {
+    session.formData = { cropHealthType: 'nutrition' };
+    session.currentStep = 'cropHealth_awaitCropName';
+    return { reply: 'Please type the name of your crop.\n(e.g. Wheat, Rice, Cotton, Tomato)', updatedSession: session };
+  } else if (i === '2') {
+    session.formData = { cropHealthType: 'deficiency' };
+    session.currentStep = 'cropHealth_awaitCropName';
+    return { reply: 'Please type the name of your crop.\n(e.g. Wheat, Rice, Cotton, Tomato)', updatedSession: session };
+  } else if (i === '3') {
+    session.currentStep = 'cropHealth_protectionMenu';
+    const reply = 'Please select protection type:\n\n1. Insecticides\n2. Weedicides\n3. Fungicides\n\n0. Go back | 00. Main menu';
+    return { reply, updatedSession: session };
+  } else if (i === '0') {
+    session.currentStep = 'main';
+    return { reply: buildMenu(tree[lang].main), updatedSession: session };
+  } else {
+    return { reply: 'Invalid option. Please reply 1, 2, or 3.\n\n1. Crop Nutrition\n2. Crop Deficiency\n3. Crop Protection', updatedSession: session };
+  }
 }
 
-function handleCropType(i, session, lang) {
-  const cropKey = (session.formData.cropName || '').toLowerCase().trim();
-  const crop = tree.crops[cropKey] || tree.crops.default;
-  let suggestion = '';
+function handleCropProtectionMenu(i, session, lang) {
+  const typeMap = { '1': 'insecticide', '2': 'weedicide', '3': 'fungicide' };
+  if (typeMap[i]) {
+    session.formData = { cropHealthType: typeMap[i] };
+    session.currentStep = 'cropHealth_awaitCropName';
+    return { reply: 'Please type the name of your crop.\n(e.g. Wheat, Rice, Cotton, Tomato)', updatedSession: session };
+  } else if (i === '0') {
+    session.currentStep = 'cropHealth_mainMenu';
+    return { reply: 'Please select:\n\n1. Crop Nutrition\n2. Crop Deficiency\n3. Crop Protection\n\n0. Go back | 00. Main menu', updatedSession: session };
+  } else {
+    return { reply: 'Invalid option. Please reply 1, 2, or 3.\n\n1. Insecticides\n2. Weedicides\n3. Fungicides', updatedSession: session };
+  }
+}
 
-  if (i === '1') suggestion = crop.pesticide;
-  else if (i === '2') suggestion = crop.nutrition;
-  else return { reply: 'Invalid option. Please reply 1 or 2.', updatedSession: session };
+function handleCropName(i, session, lang) {
+  const cropKey = i.toLowerCase().trim();
+  const crop = tree.crops[cropKey] || tree.crops.default;
+  const type = session.formData.cropHealthType;
+  const recommendation = crop[type];
 
   session.currentStep = 'cropHealth_awaitNextAction';
-  const reply = `${suggestion}\n\nWhat would you like to do next?\n\n1. Call helpline\n2. Find nearest dealer`;
+  const reply = `${recommendation}\n\nWhat would you like to do next?\n\n1. Call helpline\n2. Find dealers in your state`;
   return { reply, updatedSession: session };
 }
 
 function handleCropNextAction(i, session, lang) {
-  let reply = '';
   if (i === '1') {
-    reply = '📞 MASCO NuAg Helpline: 1800-XXX-XXXX\nAvailable: Mon-Sat, 9am to 6pm\n\nOur agronomist will guide you on the right product and usage.\n\nReply 00 for Main Menu';
     session.currentStep = 'main';
+    return { reply: '📞 MASCO NuAg Helpline: 1800-XXX-XXXX\nAvailable: Mon-Sat, 9am to 6pm\n\nOur agronomist will guide you further.\n\nReply 00 for Main Menu', updatedSession: session };
   } else if (i === '2') {
     session.currentStep = 'cropHealth_awaitPincode';
-    reply = 'Please enter your pincode to find the nearest dealer.';
+    return { reply: 'Please enter your pincode to find dealers in your state.', updatedSession: session };
   } else {
-    reply = 'Invalid option. Please reply 1 or 2.';
+    return { reply: 'Invalid option. Please reply 1 or 2.\n\n1. Call helpline\n2. Find dealers in your state', updatedSession: session };
   }
-  return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
-// 4. NEAREST DEALER (shared by Crop Health path too)
-// ════════════════════════════════════════════
-function handleDealerLookup(i, session, lang, doneStep) {
-  const pincode = i.trim();
+// ═══════════════════════════════
+// 4. DEALER LOOKUP (shared)
+// ═══════════════════════════════
+function handleDealerLookup(i, session, lang) {
   const { getStateFromPincode } = require('../utils/pincodeHelper');
+  const pincode = i.trim();
   const state = getStateFromPincode(pincode);
 
   if (!state) {
     session.currentStep = 'main';
-    const reply = `Sorry, we could not identify the state for pincode ${pincode}.\n\nPlease call our helpline for dealer info:\n📞 1800-XXX-XXXX\n\nReply 00 for Main Menu`;
-    return { reply, updatedSession: session };
+    return {
+      reply: `Sorry, we could not identify the state for pincode ${pincode}.\n\nPlease call our helpline:\n📞 1800-XXX-XXXX\n\nReply 00 for Main Menu`,
+      updatedSession: session
+    };
   }
 
   const dealersByState = tree.dealers.states;
   const dealers = dealersByState[state] || dealersByState['default'];
 
-  let reply = `MASCO NuAg Dealers in ${state} (Pincode: ${pincode}):\n\n`;
-
+  let reply = `🏪 MASCO NuAg Dealers in ${state}:\n(Pincode entered: ${pincode})\n\n`;
   dealers.forEach((dealer, index) => {
-    reply += `${index + 1}. 🏪 ${dealer.name}\n`;
+    reply += `${index + 1}. ${dealer.name}\n`;
     reply += `   📍 ${dealer.address}, ${dealer.city}\n`;
     reply += `   📞 ${dealer.phone}\n\n`;
   });
 
-  if (dealers === dealersByState['default']) {
-    reply += `We are expanding to your area soon!\nFor now, please call: 📞 1800-XXX-XXXX`;
+  if (!dealersByState[state]) {
+    reply += `We are expanding to your area soon!\nFor now please call: 📞 1800-XXX-XXXX`;
   } else {
     reply += `📞 MASCO NuAg Helpline: 1800-XXX-XXXX`;
   }
 
   reply += '\n\nReply 00 for Main Menu';
-
   session.currentStep = 'main';
   return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 // 5. OTHER SUPPORT
-// ════════════════════════════════════════════
+// ═══════════════════════════════
 async function finishOtherSupport(phone, session, lang) {
   const data = session.formData;
   await saveSupportRequest(phone, data);
-
-  const reply = `Thank you for reaching out to MASCO NuAg! 🙏\n\nWe have received your details:\n• Name: ${data.name}\n• Mobile: ${data.mobile}\n• City: ${data.city}\n• Comment: ${data.comment}\n\nOur team will contact you within 24 hours.\n\nReply 00 for Main Menu`;
-
+  const reply = `✅ Thank you for reaching out to MASCO NuAg! 🙏\n\nWe have received your details:\n• Name: ${data.name}\n• Mobile: ${data.mobile}\n• City: ${data.city}\n• Comment: ${data.comment}\n\nOur team will contact you within 24 hours.\n\nReply 00 for Main Menu`;
   session.currentStep = 'main';
   session.formData = {};
   return { reply, updatedSession: session };
 }
 
-// ════════════════════════════════════════════
-// MENU BUILDER HELPER
-// ════════════════════════════════════════════
+// ═══════════════════════════════
+// HELPERS
+// ═══════════════════════════════
 function buildMenu(node) {
   if (!node) return 'Something went wrong. Type restart to begin again.';
   let msg = node.prompt + '\n\n';

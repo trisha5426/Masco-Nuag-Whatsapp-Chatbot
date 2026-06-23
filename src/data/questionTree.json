@@ -75,33 +75,48 @@
     }
   },
 
-  "crops": {
-    "wheat": {
-      "displayName": "Wheat",
-      "pesticide": "For Wheat pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre | Spray in evening hours",
-      "nutrition": "For Wheat nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus\nDosage: 25 kg/acre as top dressing"
-    },
-    "rice": {
-      "displayName": "Rice",
-      "pesticide": "For Rice pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre | Spray after draining field water",
-      "nutrition": "For Rice nutrition, we recommend:\n👉 MASCO NuAg Iron-Rich + Nitro-Plus\nDosage: As per soil test recommendation"
-    },
-    "cotton": {
-      "displayName": "Cotton",
-      "pesticide": "For Cotton pest issues, we recommend:\n👉 MASCO NuAg BollGuard\nDosage: 0.4g per litre | Set up pheromone traps",
-      "nutrition": "For Cotton nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus + Mag-Rich\nDosage: As per soil test recommendation"
-    },
-    "tomato": {
-      "displayName": "Tomato",
-      "pesticide": "For Tomato pest issues, we recommend:\n👉 MASCO NuAg PestGuard\nDosage: 2ml per litre, spray every 10-12 days",
-      "nutrition": "For Tomato nutrition, we recommend:\n👉 MASCO NuAg Nitro-Plus\nDosage: 30 kg DAP + 25 kg Urea per acre"
-    },
-    "default": {
-      "displayName": "your crop",
-      "pesticide": "We don't have a specific recommendation yet. Please contact our crop expert: 1800-XXX-XXXX",
-      "nutrition": "We don't have a specific recommendation yet. Please contact our crop expert: 1800-XXX-XXXX"
-    }
+ "crops": {
+  "wheat": {
+    "displayName": "Wheat",
+    "nutrition": "🌾 Wheat Nutrition Recommendations:\n\n✅ At Sowing:\n- DAP: 50 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing (21-25 days):\n- Urea: 25 kg/acre\n\n✅ Second Top Dressing (45 days):\n- Urea: 25 kg/acre\n\n👉 Recommended: MASCO NuAg Nitro-Plus\n📞 Helpline: 1800-XXX-XXXX",
+    "deficiency": "🌾 Common Wheat Deficiencies:\n\n🟡 Yellow leaves = Nitrogen deficiency\n→ Apply Urea @ 25 kg/acre\n→ Recommended: MASCO NuAg Nitro-Plus\n\n🟡 Lower leaf yellow = Magnesium deficiency\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg Mag-Rich\n\n🟡 Slow growth = Zinc deficiency\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg Zinc-Max\n\n📞 Helpline: 1800-XXX-XXXX",
+    "insecticide": "🌾 Wheat Insecticide Recommendations:\n\n🐛 Aphids:\n→ Spray Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg AphidKill\n\n🐛 Army Worm:\n→ Spray Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Termites:\n→ Drench with Chlorpyriphos @ 3ml/litre\n→ Recommended: MASCO NuAg TermiStop\n\n📞 Helpline: 1800-XXX-XXXX",
+    "weedicide": "🌾 Wheat Weedicide Recommendations:\n\n🌿 Narrow leaf weeds:\n→ Clodinafop Propargyl 15 WP @ 160g/acre\n→ Apply 30-35 days after sowing\n\n🌿 Broad leaf weeds:\n→ 2,4-D Amine Salt @ 500ml/acre\n→ Apply 25-30 days after sowing\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
+    "fungicide": "🌾 Wheat Fungicide Recommendations:\n\n🍄 Yellow/Brown Rust:\n→ Propiconazole 25 EC @ 1ml/litre\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Powdery Mildew:\n→ Tebuconazole 25.9 EC @ 1ml/litre\n→ Recommended: MASCO NuAg RustGuard\n\n⏰ Best time: Spray at first sign of disease\n📞 Helpline: 1800-XXX-XXXX"
   },
+  "rice": {
+    "displayName": "Rice",
+    "nutrition": "🌾 Rice Nutrition Recommendations:\n\n✅ At Transplanting:\n- DAP: 35 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing 1 (21 days):\n- Urea: 20 kg/acre\n\n✅ Top Dressing 2 (45 days):\n- Urea: 20 kg/acre\n\n👉 Recommended: MASCO NuAg Rice Kit\n📞 Helpline: 1800-XXX-XXXX",
+    "deficiency": "🌾 Common Rice Deficiencies:\n\n🟡 Yellowing = Iron/Nitrogen deficiency\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg Iron-Rich\n\n🟡 Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 10 kg/acre\n\n🟡 White tips = Zinc deficiency\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg Zinc-Max\n\n📞 Helpline: 1800-XXX-XXXX",
+    "insecticide": "🌾 Rice Insecticide Recommendations:\n\n🐛 Brown Plant Hopper:\n→ Buprofezin 25 SC @ 1ml/litre\n→ Recommended: MASCO NuAg HopperStop\n\n🐛 Stem Borer:\n→ Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Leaf Folder:\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg BollGuard\n\n📞 Helpline: 1800-XXX-XXXX",
+    "weedicide": "🌾 Rice Weedicide Recommendations:\n\n🌿 Early weeds (0-3 days after transplant):\n→ Pretilachlor 50 EC @ 500ml/acre\n\n🌿 Mixed weeds (15-20 days):\n→ Bispyribac Sodium @ 100ml/acre\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
+    "fungicide": "🌾 Rice Fungicide Recommendations:\n\n🍄 Blast Disease:\n→ Tricyclazole 75 WP @ 0.6g/litre\n→ Recommended: MASCO NuAg BlastShield\n\n🍄 Sheath Blight:\n→ Hexaconazole 5 EC @ 2ml/litre\n→ Recommended: MASCO NuAg FungiShield\n\n📞 Helpline: 1800-XXX-XXXX"
+  },
+  "cotton": {
+    "displayName": "Cotton",
+    "nutrition": "🌾 Cotton Nutrition Recommendations:\n\n✅ At Sowing:\n- DAP: 40 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing 1 (30 days):\n- Urea: 20 kg/acre\n\n✅ Top Dressing 2 (60 days):\n- Urea: 20 kg/acre + SOP: 10 kg/acre\n\n👉 Recommended: MASCO NuAg Cotton Kit\n📞 Helpline: 1800-XXX-XXXX",
+    "deficiency": "🌾 Common Cotton Deficiencies:\n\n🟡 Yellow leaves = Nitrogen deficiency\n→ Apply Urea @ 20 kg/acre\n→ Recommended: MASCO NuAg Nitro-Plus\n\n🟡 Red/Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 15 kg/acre\n\n🟡 Leaf curl = Magnesium deficiency\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg Mag-Rich\n\n📞 Helpline: 1800-XXX-XXXX",
+    "insecticide": "🌾 Cotton Insecticide Recommendations:\n\n🐛 Bollworm:\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg BollGuard\n\n🐛 Whitefly:\n→ Diafenthiuron 50 WP @ 1g/litre\n→ Recommended: MASCO NuAg WhiteKill\n\n🐛 Aphids:\n→ Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg AphidKill\n\n📞 Helpline: 1800-XXX-XXXX",
+    "weedicide": "🌾 Cotton Weedicide Recommendations:\n\n🌿 Pre-emergence (0-3 days after sowing):\n→ Pendimethalin 30 EC @ 1 litre/acre\n\n🌿 Post-emergence (15-20 days):\n→ Quizalofop Ethyl @ 400ml/acre\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
+    "fungicide": "🌾 Cotton Fungicide Recommendations:\n\n🍄 Root Rot:\n→ Carbendazim @ 1g/litre (soil drench)\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Alternaria Leaf Spot:\n→ Mancozeb 75 WP @ 2.5g/litre\n\n📞 Helpline: 1800-XXX-XXXX"
+  },
+  "tomato": {
+    "displayName": "Tomato",
+    "nutrition": "🍅 Tomato Nutrition Recommendations:\n\n✅ At Transplanting:\n- DAP: 30 kg/acre\n- MOP: 15 kg/acre\n\n✅ Top Dressing (30 days):\n- Urea: 25 kg/acre\n\n✅ At Fruiting:\n- SOP: 10 kg/acre\n\n👉 Recommended: MASCO NuAg Nitro-Plus\n📞 Helpline: 1800-XXX-XXXX",
+    "deficiency": "🍅 Common Tomato Deficiencies:\n\n🟡 Yellow leaves = Nitrogen/Iron deficiency\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg Iron-Rich\n\n🟡 Blossom end rot = Calcium deficiency\n→ Spray Calcium Nitrate @ 1%\n\n🟡 Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 10 kg/acre\n\n📞 Helpline: 1800-XXX-XXXX",
+    "insecticide": "🍅 Tomato Insecticide Recommendations:\n\n🐛 Fruit Borer:\n→ Spinosad @ 0.3ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Whitefly:\n→ Imidacloprid @ 0.5ml/litre\n→ Recommended: MASCO NuAg WhiteKill\n\n🐛 Mites:\n→ Abamectin @ 0.5ml/litre\n\n📞 Helpline: 1800-XXX-XXXX",
+    "weedicide": "🍅 Tomato Weedicide Recommendations:\n\n🌿 Pre-emergence:\n→ Metribuzin 70 WP @ 200g/acre\n\n🌿 Manual weeding recommended at 20-25 days\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
+    "fungicide": "🍅 Tomato Fungicide Recommendations:\n\n🍄 Early Blight:\n→ Mancozeb 75 WP @ 2.5g/litre\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Late Blight:\n→ Metalaxyl + Mancozeb @ 2g/litre\n\n🍄 Damping Off:\n→ Carbendazim @ 1g/litre (soil drench)\n\n📞 Helpline: 1800-XXX-XXXX"
+  },
+  "default": {
+    "displayName": "your crop",
+    "nutrition": "For specific nutrition advice for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
+    "deficiency": "For specific deficiency diagnosis for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
+    "insecticide": "For specific insecticide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
+    "weedicide": "For specific weedicide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
+    "fungicide": "For specific fungicide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)"
+  }
+},
 
 "dealers": {
   "states": {
