@@ -20,13 +20,13 @@ router.get('/login', (req, res) => {
       <title>MASCO NuAg Admin Login</title>
       <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, Arial, sans-serif; background: #1A6B3C; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        body { font-family: -apple-system, Arial, sans-serif; background: #D65303; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
         .box { background: white; padding: 40px; border-radius: 10px; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        h1 { font-size: 20px; color: #145230; margin-bottom: 6px; }
+        h1 { font-size: 20px; color: #D65303; margin-bottom: 6px; }
         p { font-size: 13px; color: #666; margin-bottom: 24px; }
         input { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; }
-        button { width: 100%; padding: 12px; background: #1A6B3C; color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
-        button:hover { background: #145230; }
+        button { width: 100%; padding: 12px; background: #D65303; color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #D65303; }
         .error { color: #C62828; font-size: 13px; margin-bottom: 12px; }
       </style>
     </head>
@@ -119,23 +119,23 @@ function renderDashboard(complaints, supportRequests) {
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, Arial, sans-serif; background: #f4f6f5; color: #222; padding: 24px; }
-    .header { background: #1A6B3C; color: white; padding: 20px 24px; border-radius: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .header { background: #D65303; color: white; padding: 20px 24px; border-radius: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
     .header h1 { font-size: 22px; margin-bottom: 4px; }
     .header p { font-size: 13px; color: #d0edd0; }
     .logout { color: white; text-decoration: none; font-size: 13px; border: 1px solid rgba(255,255,255,0.4); padding: 6px 14px; border-radius: 6px; }
     .logout:hover { background: rgba(255,255,255,0.1); }
     .stats { display: flex; gap: 16px; margin-bottom: 24px; }
-    .stat-card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; border-left: 4px solid #1A6B3C; }
-    .stat-card .num { font-size: 28px; font-weight: bold; color: #1A6B3C; }
+    .stat-card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; border-left: 4px solid #D65303; }
+    .stat-card .num { font-size: 28px; font-weight: bold; color: #D65303; }
     .stat-card .label { font-size: 13px; color: #666; margin-top: 4px; }
     .section { background: white; border-radius: 8px; padding: 20px; margin-bottom: 24px; overflow-x: auto; }
-    .section h2 { font-size: 16px; color: #145230; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #E8F5E9; }
+    .section h2 { font-size: 16px; color: #D65303; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #E8F5E9; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    th { background: #E8F5E9; color: #145230; text-align: left; padding: 10px 12px; font-weight: 600; white-space: nowrap; }
+    th { background: #E8F5E9; color: #D65303; text-align: left; padding: 10px 12px; font-weight: 600; white-space: nowrap; }
     td { padding: 10px 12px; border-bottom: 1px solid #eee; white-space: nowrap; }
     tr:hover { background: #fafafa; }
-    .badge { background: #FFF3E0; color: #E65100; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
-    a { color: #1565C0; text-decoration: none; }
+    .badge { background: #FFF3E0; color: #D65303; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+    a { color: #D65303; text-decoration: none; }
     .empty { padding: 24px; text-align: center; color: #999; font-size: 13px; }
   </style>
 </head>
