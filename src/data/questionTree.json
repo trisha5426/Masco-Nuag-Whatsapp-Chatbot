@@ -103,21 +103,126 @@
     }
   },
 
-  "dealers": {
-    "302001": {
-      "name": "Sharma Agro Center",
-      "address": "Near Bus Stand, Jaipur, Rajasthan",
-      "phone": "+91-9876543210"
-    },
-    "110001": {
-      "name": "Delhi Krishi Bhandar",
-      "address": "Main Market, Connaught Place, New Delhi",
-      "phone": "+91-9876543211"
-    },
-    "default": {
-      "name": "MASCO NuAg Authorized Dealer",
-      "address": "Please call our helpline to find the exact address in your area",
-      "phone": "+91 7982617530"
-    }
+"dealers": {
+  "states": {
+    "Rajasthan": [
+      {
+        "name": "Sharma Agro Center",
+        "address": "Near Bus Stand, Jaipur",
+        "phone": "+91-9876543210",
+        "city": "Jaipur"
+      },
+      {
+        "name": "Kisan Seva Kendra",
+        "address": "Main Market, Jodhpur",
+        "phone": "+91-9876543211",
+        "city": "Jodhpur"
+      },
+      {
+        "name": "Green Field Agro",
+        "address": "Station Road, Udaipur",
+        "phone": "+91-9876543212",
+        "city": "Udaipur"
+      }
+    ],
+    "Uttar Pradesh": [
+      {
+        "name": "UP Agro Suppliers",
+        "address": "Navyug Market, Lucknow",
+        "phone": "+91-9876543220",
+        "city": "Lucknow"
+      },
+      {
+        "name": "Kisan Brothers",
+        "address": "Civil Lines, Agra",
+        "phone": "+91-9876543221",
+        "city": "Agra"
+      },
+      {
+        "name": "Anndata Agro Hub",
+        "address": "GT Road, Kanpur",
+        "phone": "+91-9876543222",
+        "city": "Kanpur"
+      }
+    ],
+    "Madhya Pradesh": [
+      {
+        "name": "MP Krishi Bhandar",
+        "address": "New Market, Bhopal",
+        "phone": "+91-9876543230",
+        "city": "Bhopal"
+      },
+      {
+        "name": "Sona Agro Center",
+        "address": "MG Road, Indore",
+        "phone": "+91-9876543231",
+        "city": "Indore"
+      }
+    ],
+    "Haryana": [
+      {
+        "name": "Haryana Agro Store",
+        "address": "Sector 12, Faridabad",
+        "phone": "+91-9876543240",
+        "city": "Faridabad"
+      },
+      {
+        "name": "Green Gold Agro",
+        "address": "Model Town, Panipat",
+        "phone": "+91-9876543241",
+        "city": "Panipat"
+      }
+    ],
+    "Punjab": [
+      {
+        "name": "Punjab Agro Traders",
+        "address": "Lawrence Road, Amritsar",
+        "phone": "+91-9876543250",
+        "city": "Amritsar"
+      },
+      {
+        "name": "Fertile Land Agro",
+        "address": "GT Road, Ludhiana",
+        "phone": "+91-9876543251",
+        "city": "Ludhiana"
+      }
+    ],
+    "Gujarat": [
+      {
+        "name": "Gujarat Krishi Kendra",
+        "address": "CG Road, Ahmedabad",
+        "phone": "+91-9876543260",
+        "city": "Ahmedabad"
+      },
+      {
+        "name": "Saurashtra Agro Hub",
+        "address": "Kalawad Road, Rajkot",
+        "phone": "+91-9876543261",
+        "city": "Rajkot"
+      }
+    ],
+    "Maharashtra": [
+      {
+        "name": "Maharashtra Agro Suppliers",
+        "address": "LBS Marg, Pune",
+        "phone": "+91-9876543270",
+        "city": "Pune"
+      },
+      {
+        "name": "Vidarbha Kisan Store",
+        "address": "Wardha Road, Nagpur",
+        "phone": "+91-9876543271",
+        "city": "Nagpur"
+      }
+    ],
+    "default": [
+      {
+        "name": "MASCO NuAg Head Office",
+        "address": "Please call our helpline for dealer details in your area",
+        "phone": "1800-XXX-XXXX",
+        "city": "Pan India"
+      }
+    ]
   }
+}
 }

@@ -269,9 +269,33 @@ function handleCropNextAction(i, session, lang) {
 // ════════════════════════════════════════════
 function handleDealerLookup(i, session, lang, doneStep) {
   const pincode = i.trim();
-  const dealer = tree.dealers[pincode] || tree.dealers.default;
+  const { getStateFromPincode } = require('../utils/pincodeHelper');
+  const state = getStateFromPincode(pincode);
 
-  const reply = `Nearest MASCO NuAg Dealer to ${pincode}:\n\n🏪 Dealer Name: ${dealer.name}\n   Address: ${dealer.address}\n   📞 Contact: ${dealer.phone}\n\nReply 00 for Main Menu`;
+  if (!state) {
+    session.currentStep = 'main';
+    const reply = `Sorry, we could not identify the state for pincode ${pincode}.\n\nPlease call our helpline for dealer info:\n📞 1800-XXX-XXXX\n\nReply 00 for Main Menu`;
+    return { reply, updatedSession: session };
+  }
+
+  const dealersByState = tree.dealers.states;
+  const dealers = dealersByState[state] || dealersByState['default'];
+
+  let reply = `MASCO NuAg Dealers in ${state} (Pincode: ${pincode}):\n\n`;
+
+  dealers.forEach((dealer, index) => {
+    reply += `${index + 1}. 🏪 ${dealer.name}\n`;
+    reply += `   📍 ${dealer.address}, ${dealer.city}\n`;
+    reply += `   📞 ${dealer.phone}\n\n`;
+  });
+
+  if (dealers === dealersByState['default']) {
+    reply += `We are expanding to your area soon!\nFor now, please call: 📞 1800-XXX-XXXX`;
+  } else {
+    reply += `📞 MASCO NuAg Helpline: 1800-XXX-XXXX`;
+  }
+
+  reply += '\n\nReply 00 for Main Menu';
 
   session.currentStep = 'main';
   return { reply, updatedSession: session };
