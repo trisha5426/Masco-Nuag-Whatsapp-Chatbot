@@ -1,31 +1,30 @@
-
 {
-  "greet": "🌾 Hi! Welcome to MASCO NuAg Farmer Support.\nPlease select your language:\n\n1. English\n2. हिन्दी",
+  "greet": "🌾 *Welcome to MASCO NuAg Farmer Support!*\n\nनमस्ते! Hello!\n\nPlease select your language:\n\n1️⃣ English\n2️⃣ हिन्दी",
 
   "english": {
     "main": {
-      "prompt": "Please select a category:",
+      "prompt": "🌾 *MASCO NuAg Farmer Support*\n\nPlease select a category:\n\n1️⃣ Product Information\n2️⃣ Product Complaint\n3️⃣ Crop Health Solution\n4️⃣ Nearest Dealer\n5️⃣ Other Support\n\n_Reply with a number to continue_",
       "parent": "main",
       "options": {
-        "1": { "label": "Product Information", "next": "productInfo" },
-        "2": { "label": "Product Complaint",   "next": "complaint"   },
-        "3": { "label": "Crop Health Solution","next": "cropHealth"  },
-        "4": { "label": "Nearest Dealer",      "next": "dealer"      },
-        "5": { "label": "Other Support",       "next": "otherSupport"}
+        "1": { "label": "Product Information",  "next": "productInfo"  },
+        "2": { "label": "Product Complaint",    "next": "complaint"    },
+        "3": { "label": "Crop Health Solution", "next": "cropHealth"   },
+        "4": { "label": "Nearest Dealer",       "next": "dealer"       },
+        "5": { "label": "Other Support",        "next": "otherSupport" }
       }
     }
   },
 
   "hindi": {
     "main": {
-      "prompt": "कृपया विषय चुनें:",
+      "prompt": "🌾 *MASCO NuAg किसान सहायता*\n\nकृपया विषय चुनें:\n\n1️⃣ उत्पाद जानकारी\n2️⃣ शिकायत दर्ज करें\n3️⃣ फसल स्वास्थ्य समाधान\n4️⃣ नजदीकी डीलर\n5️⃣ अन्य सहायता\n\n_जवाब देने के लिए नंबर टाइप करें_",
       "parent": "main",
       "options": {
-        "1": { "label": "उत्पाद जानकारी",      "next": "productInfo" },
-        "2": { "label": "शिकायत दर्ज करें",     "next": "complaint"   },
-        "3": { "label": "फसल स्वास्थ्य समाधान", "next": "cropHealth"  },
-        "4": { "label": "नजदीकी डीलर",          "next": "dealer"      },
-        "5": { "label": "अन्य सहायता",          "next": "otherSupport"}
+        "1": { "label": "उत्पाद जानकारी",        "next": "productInfo"  },
+        "2": { "label": "शिकायत दर्ज करें",       "next": "complaint"    },
+        "3": { "label": "फसल स्वास्थ्य समाधान",   "next": "cropHealth"   },
+        "4": { "label": "नजदीकी डीलर",            "next": "dealer"       },
+        "5": { "label": "अन्य सहायता",            "next": "otherSupport" }
       }
     }
   },
@@ -33,211 +32,129 @@
   "products": {
     "nitro-plus": {
       "displayName": "Nitro-Plus",
-      "about": "Nitro-Plus is a high-efficiency nitrogen fertilizer for wheat, rice, and cotton. Boosts vegetative growth and leaf greening.",
-      "usage": "Apply as top dressing after irrigation. No mixing required for soil application.",
-      "dosage": "25 kg per acre, split into 2 applications during the season.",
-      "precautions": "Wear gloves while handling. Store in a dry place. Keep away from children."
+      "about": "📦 *About MASCO NuAg Nitro-Plus*\n\nNitro-Plus is a high-efficiency *nitrogen fertilizer* for wheat, rice, and cotton.\n\n✅ Boosts vegetative growth\n✅ Corrects leaf yellowing\n✅ Improves crop quality\n\n_Suitable for all major crops_\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "usage": "📋 *How to Use Nitro-Plus*\n\n✅ Apply as *top dressing* after irrigation\n✅ No mixing required for soil application\n✅ Best applied in cool hours\n\n⚠️ *Do not apply:*\n• During heavy rain\n• On waterlogged soil\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "dosage": "⚖️ *Nitro-Plus Dosage*\n\n🌱 *Per Acre:* 25 kg\n💧 *Split into 2 applications:*\n• First dose: 21-25 days after sowing\n• Second dose: 45 days after sowing\n\n⚠️ Do not exceed recommended dose\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "precautions": "⚠️ *Nitro-Plus Safety Precautions*\n\n🧤 Wear gloves while handling\n😷 Avoid inhaling dust\n👁️ Avoid contact with eyes\n🚿 Wash hands after use\n\n🚨 *First Aid:*\n• Skin contact: wash with soap and water\n• Eyes: rinse with clean water for 15 mins\n• Swallowed: consult doctor immediately\n\n📞 *Emergency:* 1800-XXX-XXXX"
     },
     "pestguard": {
       "displayName": "PestGuard",
-      "about": "PestGuard is a broad-spectrum systemic insecticide effective against aphids, bollworms, and stem borers.",
-      "usage": "Spray in early morning or evening. Avoid spraying during flowering stage.",
-      "dosage": "2ml per litre of water, spray 200 litres per acre.",
-      "precautions": "Wear a mask and gloves. Do not spray near water bodies. Re-entry after 24 hours."
+      "about": "📦 *About MASCO NuAg PestGuard*\n\nPestGuard is a *broad-spectrum systemic insecticide* effective against aphids, bollworms, and stem borers.\n\n✅ Fast acting\n✅ Long lasting protection\n✅ Suitable for multiple crops\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "usage": "📋 *How to Use PestGuard*\n\n✅ Spray in *early morning or evening*\n✅ Avoid spraying during flowering stage\n✅ Use clean water for mixing\n✅ Spray evenly on all plant parts\n\n⚠️ Do not spray during strong winds\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "dosage": "⚖️ *PestGuard Dosage*\n\n💧 *Mixing ratio:* 2ml per litre of water\n🌾 *Per acre:* spray 200 litres\n⏰ *Repeat:* after 10-12 days if needed\n\n⚠️ Do not increase dosage\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "precautions": "⚠️ *PestGuard Safety Precautions*\n\n🧤 Always wear gloves and mask\n👕 Cover full body while spraying\n🚫 Do not spray near water bodies\n⏰ Re-entry after 24 hours only\n\n🚨 *First Aid:*\n• Skin: wash with soap and water\n• Eyes: rinse with water for 15 mins\n• Swallowed: go to doctor immediately\n\n📞 *Emergency:* 1800-XXX-XXXX"
     },
     "fungishield": {
       "displayName": "FungiShield",
-      "about": "FungiShield is a broad-spectrum fungicide for rust, blast, and blight diseases.",
-      "usage": "Spray at first sign of infection, repeat after 10-15 days if needed.",
-      "dosage": "1ml per litre of water.",
-      "precautions": "Avoid spraying before rain. Wear protective gear."
+      "about": "📦 *About MASCO NuAg FungiShield*\n\nFungiShield is a *broad-spectrum fungicide* for rust, blast, and blight diseases.\n\n✅ Controls multiple fungal diseases\n✅ Protective and curative action\n✅ Suitable for wheat, rice, vegetables\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "usage": "📋 *How to Use FungiShield*\n\n✅ Spray at *first sign of infection*\n✅ Apply in cool hours\n✅ Ensure complete leaf coverage\n✅ Repeat after 10-15 days if needed\n\n⚠️ Avoid spraying before rain\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "dosage": "⚖️ *FungiShield Dosage*\n\n💧 *Mixing ratio:* 1ml per litre of water\n🌾 *Per acre:* spray 200 litres\n⏰ *Repeat:* after 10-15 days\n\n⚠️ Do not mix with alkaline products\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "precautions": "⚠️ *FungiShield Safety Precautions*\n\n🧤 Wear gloves and mask\n👕 Wear full sleeve clothing\n🚿 Wash hands and face after use\n🌧️ Do not apply before expected rain\n\n🚨 *First Aid:*\n• Skin: wash with soap and water\n• Eyes: rinse with water for 15 mins\n• Swallowed: consult doctor immediately\n\n📞 *Emergency:* 1800-XXX-XXXX"
     },
     "mag-rich": {
       "displayName": "Mag-Rich",
-      "about": "Mag-Rich is a magnesium supplement that corrects lower-leaf yellowing in wheat, rice, and vegetables.",
-      "usage": "Foliar spray for quick correction, or soil application for long-term supply.",
-      "dosage": "1% solution (10g per litre) for spray, or 5 kg/acre as soil application.",
-      "precautions": "Do not mix with alkaline products. Store in a cool, dry place."
+      "about": "📦 *About MASCO NuAg Mag-Rich*\n\nMag-Rich is a *magnesium supplement* that corrects lower-leaf yellowing in wheat, rice, and vegetables.\n\n✅ Quick correction of Mg deficiency\n✅ Available for foliar and soil application\n✅ Safe for all crops\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "usage": "📋 *How to Use Mag-Rich*\n\n✅ *Foliar spray* for quick correction\n✅ *Soil application* for long-term supply\n✅ Apply in early morning or evening\n\n⚠️ Do not mix with alkaline products\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "dosage": "⚖️ *Mag-Rich Dosage*\n\n🌿 *Foliar spray:* 10g per litre water (1% solution)\n🌱 *Soil application:* 5 kg per acre\n⏰ *Repeat:* after 15 days if needed\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "precautions": "⚠️ *Mag-Rich Safety Precautions*\n\n🧤 Wear gloves while handling\n🚿 Wash hands after use\n🏠 Store in cool, dry place\n🚫 Keep away from children\n\n📞 *Emergency:* 1800-XXX-XXXX"
     },
     "bollguard": {
       "displayName": "BollGuard",
-      "about": "BollGuard is a targeted insecticide for bollworm control in cotton.",
-      "usage": "Spray in the evening. Combine with pheromone traps for best results.",
-      "dosage": "0.4g per litre of water.",
-      "precautions": "Keep away from beneficial insects like bees. Wear gloves and mask."
+      "about": "📦 *About MASCO NuAg BollGuard*\n\nBollGuard is a *targeted insecticide* for bollworm control in cotton.\n\n✅ Highly effective against bollworms\n✅ Low dose requirement\n✅ Safe for beneficial insects when used correctly\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "usage": "📋 *How to Use BollGuard*\n\n✅ Spray in the *evening only*\n✅ Combine with pheromone traps for best results\n✅ Ensure complete coverage of bolls\n\n⚠️ Keep away from bees and beneficial insects\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "dosage": "⚖️ *BollGuard Dosage*\n\n💧 *Mixing ratio:* 0.4g per litre of water\n🌾 *Per acre:* spray 200 litres\n⏰ *Repeat:* after 12-15 days if needed\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "precautions": "⚠️ *BollGuard Safety Precautions*\n\n🧤 Wear gloves and mask\n👕 Cover full body while spraying\n🐝 Keep away from flowering plants\n⏰ Re-entry after 24 hours only\n\n🚨 *First Aid:*\n• Skin: wash with soap and water\n• Eyes: rinse with water for 15 mins\n• Swallowed: go to doctor immediately\n\n📞 *Emergency:* 1800-XXX-XXXX"
     },
     "default": {
       "displayName": "this product",
-      "about": "We don't have detailed information on this product yet in our system. Please contact our helpline for assistance: 1800-XXX-XXXX",
-      "usage": "Please contact our helpline for usage instructions: 1800-XXX-XXXX",
-      "dosage": "Please contact our helpline for dosage information: 1800-XXX-XXXX",
-      "precautions": "Please contact our helpline for safety information: 1800-XXX-XXXX"
+      "about": "ℹ️ We don't have detailed information on this product in our system yet.\n\n📞 Please call our helpline for assistance:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "usage": "ℹ️ Please contact our helpline for usage instructions:\n\n📞 *1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "dosage": "ℹ️ Please contact our helpline for dosage information:\n\n📞 *1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "precautions": "ℹ️ Please contact our helpline for safety information:\n\n📞 *1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_"
     }
   },
 
- "crops": {
-  "wheat": {
-    "displayName": "Wheat",
-    "nutrition": "🌾 Wheat Nutrition Recommendations:\n\n✅ At Sowing:\n- DAP: 50 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing (21-25 days):\n- Urea: 25 kg/acre\n\n✅ Second Top Dressing (45 days):\n- Urea: 25 kg/acre\n\n👉 Recommended: MASCO NuAg Nitro-Plus\n📞 Helpline: 1800-XXX-XXXX",
-    "deficiency": "🌾 Common Wheat Deficiencies:\n\n🟡 Yellow leaves = Nitrogen deficiency\n→ Apply Urea @ 25 kg/acre\n→ Recommended: MASCO NuAg Nitro-Plus\n\n🟡 Lower leaf yellow = Magnesium deficiency\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg Mag-Rich\n\n🟡 Slow growth = Zinc deficiency\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg Zinc-Max\n\n📞 Helpline: 1800-XXX-XXXX",
-    "insecticide": "🌾 Wheat Insecticide Recommendations:\n\n🐛 Aphids:\n→ Spray Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg AphidKill\n\n🐛 Army Worm:\n→ Spray Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Termites:\n→ Drench with Chlorpyriphos @ 3ml/litre\n→ Recommended: MASCO NuAg TermiStop\n\n📞 Helpline: 1800-XXX-XXXX",
-    "weedicide": "🌾 Wheat Weedicide Recommendations:\n\n🌿 Narrow leaf weeds:\n→ Clodinafop Propargyl 15 WP @ 160g/acre\n→ Apply 30-35 days after sowing\n\n🌿 Broad leaf weeds:\n→ 2,4-D Amine Salt @ 500ml/acre\n→ Apply 25-30 days after sowing\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
-    "fungicide": "🌾 Wheat Fungicide Recommendations:\n\n🍄 Yellow/Brown Rust:\n→ Propiconazole 25 EC @ 1ml/litre\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Powdery Mildew:\n→ Tebuconazole 25.9 EC @ 1ml/litre\n→ Recommended: MASCO NuAg RustGuard\n\n⏰ Best time: Spray at first sign of disease\n📞 Helpline: 1800-XXX-XXXX"
+  "crops": {
+    "wheat": {
+      "displayName": "Wheat",
+      "nutrition": "🌾 *Wheat Nutrition Recommendations*\n\n✅ *At Sowing:*\n• DAP: 50 kg/acre\n• MOP: 20 kg/acre\n\n✅ *Top Dressing (21-25 days):*\n• Urea: 25 kg/acre\n\n✅ *Second Top Dressing (45 days):*\n• Urea: 25 kg/acre\n\n👉 *Recommended:* MASCO NuAg Nitro-Plus\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "deficiency": "🌾 *Common Wheat Deficiencies*\n\n🟡 *Yellow leaves = Nitrogen deficiency*\n→ Apply Urea @ 25 kg/acre\n→ Recommended: MASCO NuAg *Nitro-Plus*\n\n🟡 *Lower leaf yellow = Magnesium deficiency*\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg *Mag-Rich*\n\n🟡 *Slow growth = Zinc deficiency*\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg *Zinc-Max*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "insecticide": "🌾 *Wheat Insecticide Recommendations*\n\n🐛 *Aphids:*\n→ Spray Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg *AphidKill*\n\n🐛 *Army Worm:*\n→ Spray Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg *PestGuard*\n\n🐛 *Termites:*\n→ Drench with Chlorpyriphos @ 3ml/litre\n→ Recommended: MASCO NuAg *TermiStop*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "weedicide": "🌾 *Wheat Weedicide Recommendations*\n\n🌿 *Narrow leaf weeds:*\n→ Clodinafop Propargyl 15 WP @ 160g/acre\n→ Apply 30-35 days after sowing\n\n🌿 *Broad leaf weeds:*\n→ 2,4-D Amine Salt @ 500ml/acre\n→ Apply 25-30 days after sowing\n\n👉 *Recommended:* MASCO NuAg WeedClear\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "fungicide": "🌾 *Wheat Fungicide Recommendations*\n\n🍄 *Yellow/Brown Rust:*\n→ Propiconazole 25 EC @ 1ml/litre\n→ Recommended: MASCO NuAg *FungiShield*\n\n🍄 *Powdery Mildew:*\n→ Tebuconazole 25.9 EC @ 1ml/litre\n→ Recommended: MASCO NuAg *RustGuard*\n\n⏰ _Spray at first sign of disease_\n\n📞 *Helpline:* 1800-XXX-XXXX"
+    },
+    "rice": {
+      "displayName": "Rice",
+      "nutrition": "🌾 *Rice Nutrition Recommendations*\n\n✅ *At Transplanting:*\n• DAP: 35 kg/acre\n• MOP: 20 kg/acre\n\n✅ *Top Dressing 1 (21 days):*\n• Urea: 20 kg/acre\n\n✅ *Top Dressing 2 (45 days):*\n• Urea: 20 kg/acre\n\n👉 *Recommended:* MASCO NuAg Rice Kit\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "deficiency": "🌾 *Common Rice Deficiencies*\n\n🟡 *Yellowing = Iron/Nitrogen deficiency*\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg *Iron-Rich*\n\n🟡 *Purple leaves = Phosphorus deficiency*\n→ Apply DAP @ 10 kg/acre\n\n🟡 *White tips = Zinc deficiency*\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg *Zinc-Max*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "insecticide": "🌾 *Rice Insecticide Recommendations*\n\n🐛 *Brown Plant Hopper:*\n→ Buprofezin 25 SC @ 1ml/litre\n→ Recommended: MASCO NuAg *HopperStop*\n\n🐛 *Stem Borer:*\n→ Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg *PestGuard*\n\n🐛 *Leaf Folder:*\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg *BollGuard*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "weedicide": "🌾 *Rice Weedicide Recommendations*\n\n🌿 *Early weeds (0-3 days after transplant):*\n→ Pretilachlor 50 EC @ 500ml/acre\n\n🌿 *Mixed weeds (15-20 days):*\n→ Bispyribac Sodium @ 100ml/acre\n\n👉 *Recommended:* MASCO NuAg WeedClear\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "fungicide": "🌾 *Rice Fungicide Recommendations*\n\n🍄 *Blast Disease:*\n→ Tricyclazole 75 WP @ 0.6g/litre\n→ Recommended: MASCO NuAg *BlastShield*\n\n🍄 *Sheath Blight:*\n→ Hexaconazole 5 EC @ 2ml/litre\n→ Recommended: MASCO NuAg *FungiShield*\n\n📞 *Helpline:* 1800-XXX-XXXX"
+    },
+    "cotton": {
+      "displayName": "Cotton",
+      "nutrition": "🌾 *Cotton Nutrition Recommendations*\n\n✅ *At Sowing:*\n• DAP: 40 kg/acre\n• MOP: 20 kg/acre\n\n✅ *Top Dressing 1 (30 days):*\n• Urea: 20 kg/acre\n\n✅ *Top Dressing 2 (60 days):*\n• Urea: 20 kg/acre\n• SOP: 10 kg/acre\n\n👉 *Recommended:* MASCO NuAg Cotton Kit\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "deficiency": "🌾 *Common Cotton Deficiencies*\n\n🟡 *Yellow leaves = Nitrogen deficiency*\n→ Apply Urea @ 20 kg/acre\n→ Recommended: MASCO NuAg *Nitro-Plus*\n\n🟡 *Red/Purple leaves = Phosphorus deficiency*\n→ Apply DAP @ 15 kg/acre\n\n🟡 *Leaf curl = Magnesium deficiency*\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg *Mag-Rich*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "insecticide": "🌾 *Cotton Insecticide Recommendations*\n\n🐛 *Bollworm:*\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg *BollGuard*\n\n🐛 *Whitefly:*\n→ Diafenthiuron 50 WP @ 1g/litre\n→ Recommended: MASCO NuAg *WhiteKill*\n\n🐛 *Aphids:*\n→ Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg *AphidKill*\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "weedicide": "🌾 *Cotton Weedicide Recommendations*\n\n🌿 *Pre-emergence (0-3 days after sowing):*\n→ Pendimethalin 30 EC @ 1 litre/acre\n\n🌿 *Post-emergence (15-20 days):*\n→ Quizalofop Ethyl @ 400ml/acre\n\n👉 *Recommended:* MASCO NuAg WeedClear\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "fungicide": "🌾 *Cotton Fungicide Recommendations*\n\n🍄 *Root Rot:*\n→ Carbendazim @ 1g/litre (soil drench)\n→ Recommended: MASCO NuAg *FungiShield*\n\n🍄 *Alternaria Leaf Spot:*\n→ Mancozeb 75 WP @ 2.5g/litre\n\n📞 *Helpline:* 1800-XXX-XXXX"
+    },
+    "tomato": {
+      "displayName": "Tomato",
+      "nutrition": "🍅 *Tomato Nutrition Recommendations*\n\n✅ *At Transplanting:*\n• DAP: 30 kg/acre\n• MOP: 15 kg/acre\n\n✅ *Top Dressing (30 days):*\n• Urea: 25 kg/acre\n\n✅ *At Fruiting:*\n• SOP: 10 kg/acre\n\n👉 *Recommended:* MASCO NuAg Nitro-Plus\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "deficiency": "🍅 *Common Tomato Deficiencies*\n\n🟡 *Yellow leaves = Nitrogen/Iron deficiency*\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg *Iron-Rich*\n\n🟡 *Blossom end rot = Calcium deficiency*\n→ Spray Calcium Nitrate @ 1%\n\n🟡 *Purple leaves = Phosphorus deficiency*\n→ Apply DAP @ 10 kg/acre\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "insecticide": "🍅 *Tomato Insecticide Recommendations*\n\n🐛 *Fruit Borer:*\n→ Spinosad @ 0.3ml/litre\n→ Recommended: MASCO NuAg *PestGuard*\n\n🐛 *Whitefly:*\n→ Imidacloprid @ 0.5ml/litre\n→ Recommended: MASCO NuAg *WhiteKill*\n\n🐛 *Mites:*\n→ Abamectin @ 0.5ml/litre\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "weedicide": "🍅 *Tomato Weedicide Recommendations*\n\n🌿 *Pre-emergence:*\n→ Metribuzin 70 WP @ 200g/acre\n\n🌿 _Manual weeding recommended at 20-25 days_\n\n👉 *Recommended:* MASCO NuAg WeedClear\n\n📞 *Helpline:* 1800-XXX-XXXX",
+      "fungicide": "🍅 *Tomato Fungicide Recommendations*\n\n🍄 *Early Blight:*\n→ Mancozeb 75 WP @ 2.5g/litre\n→ Recommended: MASCO NuAg *FungiShield*\n\n🍄 *Late Blight:*\n→ Metalaxyl + Mancozeb @ 2g/litre\n\n🍄 *Damping Off:*\n→ Carbendazim @ 1g/litre (soil drench)\n\n📞 *Helpline:* 1800-XXX-XXXX"
+    },
+    "default": {
+      "displayName": "your crop",
+      "nutrition": "ℹ️ We don't have a specific nutrition plan for this crop yet.\n\n📞 Please call our crop expert:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "deficiency": "ℹ️ We don't have a specific deficiency guide for this crop yet.\n\n📞 Please call our crop expert:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "insecticide": "ℹ️ We don't have a specific insecticide recommendation for this crop yet.\n\n📞 Please call our crop expert:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "weedicide": "ℹ️ We don't have a specific weedicide recommendation for this crop yet.\n\n📞 Please call our crop expert:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_",
+      "fungicide": "ℹ️ We don't have a specific fungicide recommendation for this crop yet.\n\n📞 Please call our crop expert:\n*1800-XXX-XXXX*\n_(Mon-Sat, 9am to 6pm)_"
+    }
   },
-  "rice": {
-    "displayName": "Rice",
-    "nutrition": "🌾 Rice Nutrition Recommendations:\n\n✅ At Transplanting:\n- DAP: 35 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing 1 (21 days):\n- Urea: 20 kg/acre\n\n✅ Top Dressing 2 (45 days):\n- Urea: 20 kg/acre\n\n👉 Recommended: MASCO NuAg Rice Kit\n📞 Helpline: 1800-XXX-XXXX",
-    "deficiency": "🌾 Common Rice Deficiencies:\n\n🟡 Yellowing = Iron/Nitrogen deficiency\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg Iron-Rich\n\n🟡 Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 10 kg/acre\n\n🟡 White tips = Zinc deficiency\n→ Apply ZnSO4 @ 10 kg/acre\n→ Recommended: MASCO NuAg Zinc-Max\n\n📞 Helpline: 1800-XXX-XXXX",
-    "insecticide": "🌾 Rice Insecticide Recommendations:\n\n🐛 Brown Plant Hopper:\n→ Buprofezin 25 SC @ 1ml/litre\n→ Recommended: MASCO NuAg HopperStop\n\n🐛 Stem Borer:\n→ Chlorpyriphos 20 EC @ 2ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Leaf Folder:\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg BollGuard\n\n📞 Helpline: 1800-XXX-XXXX",
-    "weedicide": "🌾 Rice Weedicide Recommendations:\n\n🌿 Early weeds (0-3 days after transplant):\n→ Pretilachlor 50 EC @ 500ml/acre\n\n🌿 Mixed weeds (15-20 days):\n→ Bispyribac Sodium @ 100ml/acre\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
-    "fungicide": "🌾 Rice Fungicide Recommendations:\n\n🍄 Blast Disease:\n→ Tricyclazole 75 WP @ 0.6g/litre\n→ Recommended: MASCO NuAg BlastShield\n\n🍄 Sheath Blight:\n→ Hexaconazole 5 EC @ 2ml/litre\n→ Recommended: MASCO NuAg FungiShield\n\n📞 Helpline: 1800-XXX-XXXX"
-  },
-  "cotton": {
-    "displayName": "Cotton",
-    "nutrition": "🌾 Cotton Nutrition Recommendations:\n\n✅ At Sowing:\n- DAP: 40 kg/acre\n- MOP: 20 kg/acre\n\n✅ Top Dressing 1 (30 days):\n- Urea: 20 kg/acre\n\n✅ Top Dressing 2 (60 days):\n- Urea: 20 kg/acre + SOP: 10 kg/acre\n\n👉 Recommended: MASCO NuAg Cotton Kit\n📞 Helpline: 1800-XXX-XXXX",
-    "deficiency": "🌾 Common Cotton Deficiencies:\n\n🟡 Yellow leaves = Nitrogen deficiency\n→ Apply Urea @ 20 kg/acre\n→ Recommended: MASCO NuAg Nitro-Plus\n\n🟡 Red/Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 15 kg/acre\n\n🟡 Leaf curl = Magnesium deficiency\n→ Spray MgSO4 @ 1% solution\n→ Recommended: MASCO NuAg Mag-Rich\n\n📞 Helpline: 1800-XXX-XXXX",
-    "insecticide": "🌾 Cotton Insecticide Recommendations:\n\n🐛 Bollworm:\n→ Emamectin Benzoate @ 0.4g/litre\n→ Recommended: MASCO NuAg BollGuard\n\n🐛 Whitefly:\n→ Diafenthiuron 50 WP @ 1g/litre\n→ Recommended: MASCO NuAg WhiteKill\n\n🐛 Aphids:\n→ Imidacloprid 17.8 SL @ 0.5ml/litre\n→ Recommended: MASCO NuAg AphidKill\n\n📞 Helpline: 1800-XXX-XXXX",
-    "weedicide": "🌾 Cotton Weedicide Recommendations:\n\n🌿 Pre-emergence (0-3 days after sowing):\n→ Pendimethalin 30 EC @ 1 litre/acre\n\n🌿 Post-emergence (15-20 days):\n→ Quizalofop Ethyl @ 400ml/acre\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
-    "fungicide": "🌾 Cotton Fungicide Recommendations:\n\n🍄 Root Rot:\n→ Carbendazim @ 1g/litre (soil drench)\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Alternaria Leaf Spot:\n→ Mancozeb 75 WP @ 2.5g/litre\n\n📞 Helpline: 1800-XXX-XXXX"
-  },
-  "tomato": {
-    "displayName": "Tomato",
-    "nutrition": "🍅 Tomato Nutrition Recommendations:\n\n✅ At Transplanting:\n- DAP: 30 kg/acre\n- MOP: 15 kg/acre\n\n✅ Top Dressing (30 days):\n- Urea: 25 kg/acre\n\n✅ At Fruiting:\n- SOP: 10 kg/acre\n\n👉 Recommended: MASCO NuAg Nitro-Plus\n📞 Helpline: 1800-XXX-XXXX",
-    "deficiency": "🍅 Common Tomato Deficiencies:\n\n🟡 Yellow leaves = Nitrogen/Iron deficiency\n→ Spray Ferrous Sulphate @ 0.5%\n→ Recommended: MASCO NuAg Iron-Rich\n\n🟡 Blossom end rot = Calcium deficiency\n→ Spray Calcium Nitrate @ 1%\n\n🟡 Purple leaves = Phosphorus deficiency\n→ Apply DAP @ 10 kg/acre\n\n📞 Helpline: 1800-XXX-XXXX",
-    "insecticide": "🍅 Tomato Insecticide Recommendations:\n\n🐛 Fruit Borer:\n→ Spinosad @ 0.3ml/litre\n→ Recommended: MASCO NuAg PestGuard\n\n🐛 Whitefly:\n→ Imidacloprid @ 0.5ml/litre\n→ Recommended: MASCO NuAg WhiteKill\n\n🐛 Mites:\n→ Abamectin @ 0.5ml/litre\n\n📞 Helpline: 1800-XXX-XXXX",
-    "weedicide": "🍅 Tomato Weedicide Recommendations:\n\n🌿 Pre-emergence:\n→ Metribuzin 70 WP @ 200g/acre\n\n🌿 Manual weeding recommended at 20-25 days\n\n👉 Recommended: MASCO NuAg WeedClear\n📞 Helpline: 1800-XXX-XXXX",
-    "fungicide": "🍅 Tomato Fungicide Recommendations:\n\n🍄 Early Blight:\n→ Mancozeb 75 WP @ 2.5g/litre\n→ Recommended: MASCO NuAg FungiShield\n\n🍄 Late Blight:\n→ Metalaxyl + Mancozeb @ 2g/litre\n\n🍄 Damping Off:\n→ Carbendazim @ 1g/litre (soil drench)\n\n📞 Helpline: 1800-XXX-XXXX"
-  },
-  "default": {
-    "displayName": "your crop",
-    "nutrition": "For specific nutrition advice for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
-    "deficiency": "For specific deficiency diagnosis for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
-    "insecticide": "For specific insecticide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
-    "weedicide": "For specific weedicide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)",
-    "fungicide": "For specific fungicide recommendation for your crop, please call our expert:\n📞 1800-XXX-XXXX\n(Mon-Sat, 9am-6pm)"
-  }
-},
 
-"dealers": {
-  "states": {
-    "Rajasthan": [
-      {
-        "name": "Sharma Agro Center",
-        "address": "Near Bus Stand, Jaipur",
-        "phone": "+91-9876543210",
-        "city": "Jaipur"
-      },
-      {
-        "name": "Kisan Seva Kendra",
-        "address": "Main Market, Jodhpur",
-        "phone": "+91-9876543211",
-        "city": "Jodhpur"
-      },
-      {
-        "name": "Green Field Agro",
-        "address": "Station Road, Udaipur",
-        "phone": "+91-9876543212",
-        "city": "Udaipur"
-      }
-    ],
-    "Uttar Pradesh": [
-      {
-        "name": "UP Agro Suppliers",
-        "address": "Navyug Market, Lucknow",
-        "phone": "+91-9876543220",
-        "city": "Lucknow"
-      },
-      {
-        "name": "Kisan Brothers",
-        "address": "Civil Lines, Agra",
-        "phone": "+91-9876543221",
-        "city": "Agra"
-      },
-      {
-        "name": "Anndata Agro Hub",
-        "address": "GT Road, Kanpur",
-        "phone": "+91-9876543222",
-        "city": "Kanpur"
-      }
-    ],
-    "Madhya Pradesh": [
-      {
-        "name": "MP Krishi Bhandar",
-        "address": "New Market, Bhopal",
-        "phone": "+91-9876543230",
-        "city": "Bhopal"
-      },
-      {
-        "name": "Sona Agro Center",
-        "address": "MG Road, Indore",
-        "phone": "+91-9876543231",
-        "city": "Indore"
-      }
-    ],
-    "Haryana": [
-      {
-        "name": "Haryana Agro Store",
-        "address": "Sector 12, Faridabad",
-        "phone": "+91-9876543240",
-        "city": "Faridabad"
-      },
-      {
-        "name": "Green Gold Agro",
-        "address": "Model Town, Panipat",
-        "phone": "+91-9876543241",
-        "city": "Panipat"
-      }
-    ],
-    "Punjab": [
-      {
-        "name": "Punjab Agro Traders",
-        "address": "Lawrence Road, Amritsar",
-        "phone": "+91-9876543250",
-        "city": "Amritsar"
-      },
-      {
-        "name": "Fertile Land Agro",
-        "address": "GT Road, Ludhiana",
-        "phone": "+91-9876543251",
-        "city": "Ludhiana"
-      }
-    ],
-    "Gujarat": [
-      {
-        "name": "Gujarat Krishi Kendra",
-        "address": "CG Road, Ahmedabad",
-        "phone": "+91-9876543260",
-        "city": "Ahmedabad"
-      },
-      {
-        "name": "Saurashtra Agro Hub",
-        "address": "Kalawad Road, Rajkot",
-        "phone": "+91-9876543261",
-        "city": "Rajkot"
-      }
-    ],
-    "Maharashtra": [
-      {
-        "name": "Maharashtra Agro Suppliers",
-        "address": "LBS Marg, Pune",
-        "phone": "+91-9876543270",
-        "city": "Pune"
-      },
-      {
-        "name": "Vidarbha Kisan Store",
-        "address": "Wardha Road, Nagpur",
-        "phone": "+91-9876543271",
-        "city": "Nagpur"
-      }
-    ],
-    "default": [
-      {
-        "name": "MASCO NuAg Head Office",
-        "address": "Please call our helpline for dealer details in your area",
-        "phone": "1800-XXX-XXXX",
-        "city": "Pan India"
-      }
-    ]
+  "dealers": {
+    "states": {
+      "Rajasthan": [
+        { "name": "Sharma Agro Center",   "address": "Near Bus Stand, Jaipur",        "phone": "+91-9876543210", "city": "Jaipur"   },
+        { "name": "Kisan Seva Kendra",     "address": "Main Market, Jodhpur",          "phone": "+91-9876543211", "city": "Jodhpur"  },
+        { "name": "Green Field Agro",      "address": "Station Road, Udaipur",         "phone": "+91-9876543212", "city": "Udaipur"  }
+      ],
+      "Uttar Pradesh": [
+        { "name": "UP Agro Suppliers",    "address": "Navyug Market, Lucknow",        "phone": "+91-9876543220", "city": "Lucknow"  },
+        { "name": "Kisan Brothers",       "address": "Civil Lines, Agra",             "phone": "+91-9876543221", "city": "Agra"     },
+        { "name": "Anndata Agro Hub",     "address": "GT Road, Kanpur",               "phone": "+91-9876543222", "city": "Kanpur"   }
+      ],
+      "Madhya Pradesh": [
+        { "name": "MP Krishi Bhandar",    "address": "New Market, Bhopal",            "phone": "+91-9876543230", "city": "Bhopal"   },
+        { "name": "Sona Agro Center",     "address": "MG Road, Indore",               "phone": "+91-9876543231", "city": "Indore"   }
+      ],
+      "Haryana": [
+        { "name": "Haryana Agro Store",   "address": "Sector 12, Faridabad",          "phone": "+91-9876543240", "city": "Faridabad"},
+        { "name": "Green Gold Agro",      "address": "Model Town, Panipat",           "phone": "+91-9876543241", "city": "Panipat"  }
+      ],
+      "Punjab": [
+        { "name": "Punjab Agro Traders",  "address": "Lawrence Road, Amritsar",       "phone": "+91-9876543250", "city": "Amritsar" },
+        { "name": "Fertile Land Agro",    "address": "GT Road, Ludhiana",             "phone": "+91-9876543251", "city": "Ludhiana" }
+      ],
+      "Gujarat": [
+        { "name": "Gujarat Krishi Kendra","address": "CG Road, Ahmedabad",            "phone": "+91-9876543260", "city": "Ahmedabad"},
+        { "name": "Saurashtra Agro Hub",  "address": "Kalawad Road, Rajkot",          "phone": "+91-9876543261", "city": "Rajkot"   }
+      ],
+      "Maharashtra": [
+        { "name": "Maharashtra Agro",     "address": "LBS Marg, Pune",                "phone": "+91-9876543270", "city": "Pune"     },
+        { "name": "Vidarbha Kisan Store", "address": "Wardha Road, Nagpur",           "phone": "+91-9876543271", "city": "Nagpur"   }
+      ],
+      "Delhi": [
+        { "name": "Delhi Krishi Bhandar", "address": "Main Market, Connaught Place",  "phone": "+91-9876543280", "city": "New Delhi"}
+      ],
+      "default": [
+        { "name": "MASCO NuAg Head Office","address": "Call our helpline for dealer details in your area", "phone": "1800-XXX-XXXX", "city": "Pan India"}
+      ]
+    }
   }
-}
 }
