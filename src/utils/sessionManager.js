@@ -4,14 +4,14 @@ const { FieldValue } = require('firebase-admin/firestore');
 exports.getSession = async (phone) => {
   try {
     const doc = await db.collection('users').doc(phone).get();
-    if (!doc.exists) return { currentStep: 'start', language: null, formData: {} };
+    if (!doc.exists) return { currentStep: 'start', language: null, formData: {}, shownOutOfHours: false };
 
     const data = doc.data();
     const lastActive = data.lastActiveAt?.toDate();
     const now = new Date();
     const diffMins = lastActive ? (now - lastActive) / 60000 : 999;
 
-    if (diffMins > 30) return { currentStep: 'start', language: null, formData: {} };
+    if (diffMins > 30) return { currentStep: 'start', language: null, formData: {}, shownOutOfHours: false };
 
     if (!data.formData) data.formData = {};
 

@@ -7,17 +7,48 @@ exports.getNextResponse = async (input, session, phone) => {
   let reply = '';
   let updatedSession = { ...session };
 
-  // ── Global commands ──
-if (iLower === 'restart' || iLower === 'hi' || iLower === 'hello' || !session.currentStep || session.currentStep === 'start') {
+// ── Global commands ──
+  if (iLower === 'restart' || iLower === 'hi' || iLower === 'hello' || !session.currentStep || session.currentStep === 'start') {
     updatedSession = { language: null, currentStep: 'lang', formData: {} };
     reply = tree.greet;
     return { reply, updatedSession };
+  }
+
+  // ── Business hours check ──
+  // Only show out-of-hours message once per session at main menu
+  // Bot still works 24/7 — just informs user team is offline
+  if (!isBusinessHours() && step === 'main' && !session.shownOutOfHours) {
+    updatedSession.shownOutOfHours = true;
+    reply = getOutOfHoursMessage();
+    return { reply, updatedSession };
+  }
+  if (isBusinessHours()) {
+    updatedSession.shownOutOfHours = false;
   }
 
   if (iLower === '00') {
     updatedSession.currentStep = 'main';
     updatedSession.formData = {};
     const lang = session.language || 'english';
+    function isBusinessHours() {
+  const now = new Date();
+  // Convert to IST (UTC+5:30)
+  const IST = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+  const day = IST.getUTCDay();   // 0=Sunday, 6=Saturday
+  const hour = IST.getUTCHours();
+  const isWeekday = day >= 1 && day <= 6; // Monday to Saturday
+  const isOpenHour = hour >= 9 && hour < 18; // 9am to 6pm
+  return isWeekday && isOpenHour;
+}
+
+function getOutOfHoursMessage() {
+  const now = new Date();
+  const IST = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+  const hour = IST.getUTCHours();
+  const greeting = hour < 12 ? '🌅 Good Morning' : hour < 17 ? '☀️ Good Afternoon' : '🌙 Good Evening';
+
+  return `${greeting}!\n\n⏰ *Our support team is currently offline.*\n\n🕘 *Working Hours:*\nMonday to Saturday\n9:00 AM — 6:00 PM IST\n\n_Our automated chatbot is available 24/7 to help you instantly!_\n\nPlease select a category to continue:\n\n1️⃣ Product Information\n2️⃣ Product Complaint\n3️⃣ Crop Health Solution\n4️⃣ Nearest Dealer\n5️⃣ Other Support`;
+}
     reply = buildMenu(tree[lang].main);
     return { reply, updatedSession };
   }
