@@ -22,7 +22,8 @@ exports.handleMessage = async (req, res) => {
     await logChat(from, body, reply);
 
     const twiml = new twilio.twiml.MessagingResponse();
-    twiml.message(reply);
+    // twiml.message(reply);
+    twiml.message("Hello from Twilio");
 
     console.log("Sending:", twiml.toString());
 
