@@ -23,13 +23,13 @@ exports.handleMessage = async (req, res) => {
 
     console.log("Sending:", twiml.toString());
 
-    // Send Twilio response first
-    res.type('text/xml');
-    res.send(twiml.toString());
+// Save data first
+await saveSession(from, updatedSession);
+await logChat(from, body, reply);
 
-    // Save data after responding
-    await saveSession(from, updatedSession);
-    await logChat(from, body, reply);
+// Then respond to Twilio
+res.type('text/xml');
+res.send(twiml.toString());
 
   } catch (err) {
     console.error("Error:", err);
