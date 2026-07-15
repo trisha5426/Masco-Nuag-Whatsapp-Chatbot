@@ -13,7 +13,10 @@ app.use(session({
   saveUninitialized: false,
   cookie: { maxAge: 1000 * 60 * 60 * 8 }
 }));  
-  
+app.use((req, res, next) => {
+    console.log("Incoming request:", req.method, req.url);
+    next();
+});
 app.use('/whatsapp', require('./routes/whatsapp')); 
 app.use('/admin', require('./routes/admin'));
 console.log("Registering root route...");
