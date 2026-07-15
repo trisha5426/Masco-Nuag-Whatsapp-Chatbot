@@ -3,18 +3,19 @@ const tree = require('../data/questionTree.json');
 function normalize(text) {
     return text
         .toLowerCase()
-        .replace(/[^a-z0-9]/g, '');
+        .trim();
 }
 
-function findProduct(name) {
+function findProduct(productName) {
 
-    if (!name) return tree.products.default;
+    if (!productName)
+        return tree.products.default;
 
-    const input = normalize(name);
+    const input = normalize(productName);
 
     const keys = Object.keys(tree.products);
 
-    // exact match
+    // Exact match
     for (const key of keys) {
 
         if (normalize(key) === input)
@@ -22,7 +23,7 @@ function findProduct(name) {
 
     }
 
-    // partial match
+    // Partial match
     for (const key of keys) {
 
         if (normalize(key).includes(input))
@@ -30,7 +31,7 @@ function findProduct(name) {
 
     }
 
-    // reverse partial
+    // Reverse match
     for (const key of keys) {
 
         if (input.includes(normalize(key)))
@@ -42,4 +43,6 @@ function findProduct(name) {
 
 }
 
-module.exports = { findProduct };
+module.exports = {
+    findProduct
+};

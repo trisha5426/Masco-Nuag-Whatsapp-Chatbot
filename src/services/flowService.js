@@ -1,4 +1,5 @@
 const tree = require('../data/questionTree.json');
+const { findProduct } = require('../utils/productSearch');
 const { saveComplaint, saveSupportRequest } = require('../config/firebase');
 
 exports.getNextResponse = async (input, session, phone) => {
@@ -184,8 +185,6 @@ function handleProductInfoName(i, session, lang) {
 }
 
 function handleProductInfoSubMenu(i, session, lang) {
-const { findProduct } = require('../utils/productSearch');
-
 const product = findProduct(session.formData.productName);
   const map = { '1': 'about', '2': 'usage', '3': 'dosage', '4': 'precautions' };
   let reply = '';
