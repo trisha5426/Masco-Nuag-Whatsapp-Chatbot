@@ -127,7 +127,7 @@ footer span{color:#F4A724}
 
 <footer>
   <p>&copy; 2026 <span>MASCO NuAg</span> &bull; WhatsApp Farmer Support Chatbot &bull; Available Mon&ndash;Sat, 9am&ndash;6pm IST</p>
-  <p style="margin-top:6px">For urgent help call: <span>8796223211</span></p>
+  <p style="margin-top:6px">For urgent help call: <span>1800-XXX-XXXX</span></p>
 </footer>
 
 </body>

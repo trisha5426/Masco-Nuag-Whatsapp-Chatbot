@@ -1,8 +1,4 @@
-
 const tree = require('../data/questionTree.json');
-
-const { findProduct } = require('../utils/productSearch');
-
 const { saveComplaint, saveSupportRequest } = require('../config/firebase');
 
 exports.getNextResponse = async (input, session, phone) => {
@@ -188,12 +184,8 @@ function handleProductInfoName(i, session, lang) {
 }
 
 function handleProductInfoSubMenu(i, session, lang) {
-// const product = findProduct(session.formData.productName);
- console.log("===== PRODUCT INFO MENU =====");
-
-    const product = findProduct(session.formData.productName);
-
-    console.log(product);
+  const productKey = (session.formData.productName || '').toLowerCase().trim();
+  const product = tree.products[productKey] || tree.products.default;
   const map = { '1': 'about', '2': 'usage', '3': 'dosage', '4': 'precautions' };
   let reply = '';
   if (map[i]) {
@@ -287,7 +279,7 @@ function handleCropName(i, session, lang) {
 function handleCropNextAction(i, session, lang) {
   if (i === '1') {
     session.currentStep = 'main';
-    return { reply: '📞 MASCO NuAg Helpline: 8796223211\nAvailable: Mon-Sat, 9am to 6pm\n\nOur agronomist will guide you further.\n\nReply 00 for Main Menu', updatedSession: session };
+    return { reply: '📞 MASCO NuAg Helpline: 1800-XXX-XXXX\nAvailable: Mon-Sat, 9am to 6pm\n\nOur agronomist will guide you further.\n\nReply 00 for Main Menu', updatedSession: session };
   } else if (i === '2') {
     session.currentStep = 'cropHealth_awaitPincode';
     return { reply: 'Please enter your pincode to find dealers in your state.', updatedSession: session };
@@ -300,7 +292,6 @@ function handleCropNextAction(i, session, lang) {
 // 4. DEALER LOOKUP (shared)
 // ═══════════════════════════════
 function handleDealerLookup(i, session, lang) {
-
   const { getStateFromPincode } = require('../utils/pincodeHelper');
   const pincode = i.trim();
   const state = getStateFromPincode(pincode);
@@ -308,7 +299,7 @@ function handleDealerLookup(i, session, lang) {
   if (!state) {
     session.currentStep = 'main';
     return {
-      reply: `Sorry, we could not identify the state for pincode ${pincode}.\n\nPlease call our helpline:\n📞 8796223211\n\nReply 00 for Main Menu`,
+      reply: `Sorry, we could not identify the state for pincode ${pincode}.\n\nPlease call our helpline:\n📞 1800-XXX-XXXX\n\nReply 00 for Main Menu`,
       updatedSession: session
     };
   }
@@ -324,9 +315,9 @@ function handleDealerLookup(i, session, lang) {
   });
 
   if (!dealersByState[state]) {
-    reply += `We are expanding to your area soon!\nFor now please call: 📞 8796223211`;
+    reply += `We are expanding to your area soon!\nFor now please call: 📞 1800-XXX-XXXX`;
   } else {
-    reply += `📞 MASCO NuAg Helpline: 8796223211`;
+    reply += `📞 MASCO NuAg Helpline: 1800-XXX-XXXX`;
   }
 
   reply += '\n\nReply 00 for Main Menu';
