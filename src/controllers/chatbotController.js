@@ -1,50 +1,43 @@
-// const twilio = require('twilio');
-// const { getNextResponse } = require('../services/flowService');
-// const { getSession, saveSession } = require('../utils/sessionManager');
-// const { logChat } = require('../config/firebase');
+const twilio = require('twilio');
+const { getNextResponse } = require('../services/flowService');
+const { getSession, saveSession } = require('../utils/sessionManager');
+const { logChat } = require('../config/firebase');
 
-// exports.handleMessage = async (req, res) => {
-//   console.log("BODY:", req.body);
+exports.handleMessage = async (req, res) => {
+  console.log("BODY:", req.body);
 
-//   const from = req.body.From;
-//   const body = (req.body.Body || '').trim();
+  const from = req.body.From;
+  const body = (req.body.Body || '').trim();
 
-//   try {
-//     const session = await getSession(from);
-//     console.log("Session:", session);
+  try {
+    const session = await getSession(from);
+    console.log("Session:", session);
 
-//     const { reply, updatedSession } =
-//       await getNextResponse(body, session, from);
+    const { reply, updatedSession } =
+      await getNextResponse(body, session, from);
 
-//     console.log("Reply:", reply);
+    console.log("Reply:", reply);
 
-//     await saveSession(from, updatedSession);
-//     await logChat(from, body, reply);
+    const twiml = new twilio.twiml.MessagingResponse();
+    twiml.message(reply);
 
-//     const twiml = new twilio.twiml.MessagingResponse();
-//     // twiml.message(reply);
-//     twiml.message("Hello from Twilio");
+    console.log("Sending:", twiml.toString());
 
-//     console.log("Sending:", twiml.toString());
+    // Send Twilio response first
+    res.type('text/xml');
+    res.send(twiml.toString());
 
-//     res.type('text/xml');
-//     res.send(twiml.toString());
+    // Save data after responding
+    await saveSession(from, updatedSession);
+    await logChat(from, body, reply);
 
-//   } catch (err) {
-//     console.error("Error:", err);
-//     res.status(500).send('Internal Server Error');
-//   }
-// };
-const express = require("express");
-const router = express.Router();
-const twilio = require("twilio");
+  } catch (err) {
+    console.error("Error:", err);
 
-router.post("/", (req, res) => {
-  const twiml = new twilio.twiml.MessagingResponse();
-  twiml.message("Hello from Twilio!");
+    const twiml = new twilio.twiml.MessagingResponse();
+    twiml.message("Sorry, something went wrong. Please try again.");
 
-  res.set("Content-Type", "text/xml");
-  res.status(200).send(twiml.toString());
-});
-
-module.exports = router;
+    res.type('text/xml');
+    res.send(twiml.toString());
+  }
+};
