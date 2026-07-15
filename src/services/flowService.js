@@ -6,6 +6,8 @@ exports.getNextResponse = async (input, session, phone) => {
   const iLower = i.toLowerCase();
   let reply = '';
   let updatedSession = { ...session };
+  const lang = session.language || 'english';
+const step = session.currentStep;
 
 // ── Global commands ──
   if (iLower === 'restart' || iLower === 'hi' || iLower === 'hello' || !session.currentStep || session.currentStep === 'start') {
@@ -29,8 +31,14 @@ exports.getNextResponse = async (input, session, phone) => {
   if (iLower === '00') {
     updatedSession.currentStep = 'main';
     updatedSession.formData = {};
-    const lang = session.language || 'english';
-    function isBusinessHours() {
+    // const lang = session.language || 'english';
+
+
+
+    reply = buildMenu(tree[lang].main);
+    return { reply, updatedSession };
+  }
+      function isBusinessHours() {
   const now = new Date();
   // Convert to IST (UTC+5:30)
   const IST = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
@@ -40,8 +48,7 @@ exports.getNextResponse = async (input, session, phone) => {
   const isOpenHour = hour >= 9 && hour < 18; // 9am to 6pm
   return isWeekday && isOpenHour;
 }
-
-function getOutOfHoursMessage() {
+  function getOutOfHoursMessage() {
   const now = new Date();
   const IST = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
   const hour = IST.getUTCHours();
@@ -49,9 +56,6 @@ function getOutOfHoursMessage() {
 
   return `${greeting}!\n\n⏰ *Our support team is currently offline.*\n\n🕘 *Working Hours:*\nMonday to Saturday\n9:00 AM — 6:00 PM IST\n\n_Our automated chatbot is available 24/7 to help you instantly!_\n\nPlease select a category to continue:\n\n1️⃣ Product Information\n2️⃣ Product Complaint\n3️⃣ Crop Health Solution\n4️⃣ Nearest Dealer\n5️⃣ Other Support`;
 }
-    reply = buildMenu(tree[lang].main);
-    return { reply, updatedSession };
-  }
 
   // ── Language selection ──
   if (session.currentStep === 'lang') {
@@ -69,8 +73,8 @@ function getOutOfHoursMessage() {
     return { reply, updatedSession };
   }
 
-  const lang = session.language || 'english';
-  const step = session.currentStep;
+  // const lang = session.language || 'english';
+  // const step = session.currentStep;
 
   // ── Main menu ──
   if (step === 'main') return handleMainMenu(i, updatedSession, lang);
