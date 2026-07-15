@@ -118,43 +118,282 @@
   },
 
   "dealers": {
-    "states": {
-      "Rajasthan": [
-        { "name": "Sharma Agro Center",   "address": "Near Bus Stand, Jaipur",        "phone": "+91-9876543210", "city": "Jaipur"   },
-        { "name": "Kisan Seva Kendra",     "address": "Main Market, Jodhpur",          "phone": "+91-9876543211", "city": "Jodhpur"  },
-        { "name": "Green Field Agro",      "address": "Station Road, Udaipur",         "phone": "+91-9876543212", "city": "Udaipur"  }
-      ],
-      "Uttar Pradesh": [
-        { "name": "UP Agro Suppliers",    "address": "Navyug Market, Lucknow",        "phone": "+91-9876543220", "city": "Lucknow"  },
-        { "name": "Kisan Brothers",       "address": "Civil Lines, Agra",             "phone": "+91-9876543221", "city": "Agra"     },
-        { "name": "Anndata Agro Hub",     "address": "GT Road, Kanpur",               "phone": "+91-9876543222", "city": "Kanpur"   }
-      ],
-      "Madhya Pradesh": [
-        { "name": "MP Krishi Bhandar",    "address": "New Market, Bhopal",            "phone": "+91-9876543230", "city": "Bhopal"   },
-        { "name": "Sona Agro Center",     "address": "MG Road, Indore",               "phone": "+91-9876543231", "city": "Indore"   }
-      ],
-      "Haryana": [
-        { "name": "Haryana Agro Store",   "address": "Sector 12, Faridabad",          "phone": "+91-9876543240", "city": "Faridabad"},
-        { "name": "Green Gold Agro",      "address": "Model Town, Panipat",           "phone": "+91-9876543241", "city": "Panipat"  }
-      ],
-      "Punjab": [
-        { "name": "Punjab Agro Traders",  "address": "Lawrence Road, Amritsar",       "phone": "+91-9876543250", "city": "Amritsar" },
-        { "name": "Fertile Land Agro",    "address": "GT Road, Ludhiana",             "phone": "+91-9876543251", "city": "Ludhiana" }
-      ],
-      "Gujarat": [
-        { "name": "Gujarat Krishi Kendra","address": "CG Road, Ahmedabad",            "phone": "+91-9876543260", "city": "Ahmedabad"},
-        { "name": "Saurashtra Agro Hub",  "address": "Kalawad Road, Rajkot",          "phone": "+91-9876543261", "city": "Rajkot"   }
-      ],
-      "Maharashtra": [
-        { "name": "Maharashtra Agro",     "address": "LBS Marg, Pune",                "phone": "+91-9876543270", "city": "Pune"     },
-        { "name": "Vidarbha Kisan Store", "address": "Wardha Road, Nagpur",           "phone": "+91-9876543271", "city": "Nagpur"   }
-      ],
-      "Delhi": [
-        { "name": "Delhi Krishi Bhandar", "address": "Main Market, Connaught Place",  "phone": "+91-9876543280", "city": "New Delhi"}
-      ],
-      "default": [
-        { "name": "MASCO NuAg Head Office","address": "Call our helpline for dealer details in your area", "phone": "1800-XXX-XXXX", "city": "Pan India"}
-      ]
-    }
+  "states": {
+    "Uttar Pradesh": [
+      {
+        "name": "Pradeep Kumar Agarwal",
+        "city": "Amroha",
+        "address": "Laxmi Nagar, Dhanaura Road, Amroha - 244235",
+        "phone": "9412633427"
+      },
+      {
+        "name": "Paal Beej Bhandar",
+        "city": "Bijnor",
+        "address": "Opposite Naveen Mandi, Kotdwar Road, Bijnor - 246763",
+        "phone": "9760090073"
+      },
+      {
+        "name": "Kisan Khad Bhandar",
+        "city": "Bijnor",
+        "address": "Village Kumhera, Kiratpur, Bijnor - 246731",
+        "phone": "8954238008"
+      },
+      {
+        "name": "Kissan Agri Clinic & Agri Business Centre",
+        "city": "Amroha",
+        "address": "Near IOC Petrol Pump, Gajraula Road, Amroha - 244234",
+        "phone": "9479871727"
+      },
+      {
+        "name": "Vivek Traders",
+        "city": "Bijnor",
+        "address": "Jhalu Road, Bijnor - 246726",
+        "phone": "7505939982"
+      },
+      {
+        "name": "Kisaan Beej Bhandar",
+        "city": "Bijnor",
+        "address": "Village Nangala Islam, Bhenera, Bijnor - 246731",
+        "phone": "8445799729"
+      },
+      {
+        "name": "Yadav Pesticide",
+        "city": "Amroha",
+        "address": "VPO Kamelpur, Tehsil Dhanaura, Amroha - 244231",
+        "phone": "9927392322"
+      },
+      {
+        "name": "Verma Beej Bhandar",
+        "city": "Barabanki",
+        "address": "Fatehpur, Barabanki - 225305",
+        "phone": "7380421045"
+      },
+      {
+        "name": "New Uttam Beej Bhandar",
+        "city": "Lucknow",
+        "address": "Fatehganj, Mohan Road, Lucknow - 226017",
+        "phone": "7459918501"
+      },
+      {
+        "name": "Aadya Agro Mart",
+        "city": "Sitapur",
+        "address": "Near Amer Nagar, Badagaon Road, Sitapur - 261001",
+        "phone": "6386031546"
+      },
+      {
+        "name": "Shivam Kisan Kendra",
+        "city": "Amroha",
+        "address": "Village Pila Kuind, Near Light House Makdumpur, Amroha - 244227",
+        "phone": "8077836020"
+      },
+      {
+        "name": "Ram Kisan Sewa Kendra",
+        "city": "Shamli",
+        "address": "Village Kudana, Sisoli Road, Main Bus Stand, Shamli - 247776",
+        "phone": "7417381700"
+      },
+      {
+        "name": "IPL Kisan Sewa Kendra",
+        "city": "Bijnor",
+        "address": "Near Uttam Sugar Mill, Kamrajpur Barkatpur, Bijnor - 246732",
+        "phone": "9536663255"
+      },
+      {
+        "name": "Yadav Kisan Sewa Kendra",
+        "city": "Lucknow",
+        "address": "Gram Tikariya, Kakori, Lucknow - 226101",
+        "phone": "9984236615"
+      },
+      {
+        "name": "Vedika Krishak Sewa Kendra",
+        "city": "Baghpat",
+        "address": "Shoop Road, Biral, Baghpat - 250617",
+        "phone": "8532800348"
+      },
+      {
+        "name": "Ram Bahadur Beej Bhandar",
+        "city": "Amethi",
+        "address": "Jagdishpur Chauraha, Amethi - 227816",
+        "phone": "9415385650"
+      },
+      {
+        "name": "Shri Balaji Krishi Vigyan Kendra",
+        "city": "Gangoh",
+        "address": "Beenpur Dudhla, Gangoh - 247341",
+        "phone": "7500700094"
+      },
+      {
+        "name": "Tirupati Traders",
+        "city": "Sambhal",
+        "address": "Firozpur, Moradabad Road, Sambhal - 244302",
+        "phone": "7579031786"
+      },
+      {
+        "name": "Amar Bahadur Khad Bhandar",
+        "city": "Barabanki",
+        "address": "Navipur, Barabanki - 225401",
+        "phone": "9198117574"
+      },
+      {
+        "name": "Jai Durga Kishan Kendra",
+        "city": "Lucknow",
+        "address": "Mall Road, Malihabad, Lucknow - 227111",
+        "phone": "9839221519"
+      },
+      {
+        "name": "Krishi Kendra Agrijunction One Stop Shop",
+        "city": "Bijnor",
+        "address": "Chachai Road, Siau, Chandpur, Bijnor - 246725",
+        "phone": "9758730486"
+      },
+      {
+        "name": "Suresh Khad Bhandar",
+        "city": "Amroha",
+        "address": "Kalyanpur Road, Ahmadgar, Shiv Nagar, Amroha - 244221",
+        "phone": "9837970461"
+      }
+    ],
+
+    "Haryana": [
+      {
+        "name": "Kheti Sewa Centre",
+        "city": "Sirsa",
+        "address": "Shop 28, Janta Bhawan Road, Sirsa - 125055",
+        "phone": "9416404502"
+      },
+      {
+        "name": "Kisan Beej Kender",
+        "city": "Sirsa",
+        "address": "Shop 55-57, Janta Bhawan, Sirsa - 125055",
+        "phone": "9254100616"
+      },
+      {
+        "name": "Bhaichara Beej Company",
+        "city": "Hisar",
+        "address": "Main Bus Stand, Mangali, Hisar - 125005",
+        "phone": "9812567865"
+      },
+      {
+        "name": "Aggarwal Pesticides & Beej Bhandar",
+        "city": "Sirsa",
+        "address": "Near Anaj Mandi, Ellenabad, Sirsa - 125102",
+        "phone": "9612390912"
+      },
+      {
+        "name": "Pandit Ji Beej Bhandar",
+        "city": "Hisar",
+        "address": "Shop 238, New Grain Market, Hisar - 125001",
+        "phone": "9812708448"
+      },
+      {
+        "name": "Barwala Beej Bhandar",
+        "city": "Hisar",
+        "address": "Daulatpur Road, Barwala, Hisar - 125121",
+        "phone": "9996250242"
+      }
+    ],
+
+    "Rajasthan": [
+      {
+        "name": "Choudhary Krishi Sewa Kendra",
+        "city": "Shri Dungargarh",
+        "address": "NH-11, Shri Dungargarh - 331803",
+        "phone": "8560052124"
+      },
+      {
+        "name": "Shree Shyam Agro Clinic",
+        "city": "Bikaner",
+        "address": "Village Bigga, Dungargarh, Bikaner - 331803",
+        "phone": "9660948244"
+      },
+      {
+        "name": "Jay Dayal Agro",
+        "city": "Bikaner",
+        "address": "Shop 1, New Anaj Mandi, Bikaner - 334003",
+        "phone": "9414967882"
+      },
+      {
+        "name": "New Dhaka Khad & Beej Bhandar",
+        "city": "Phalodi",
+        "address": "Village Aau, Phalodi - 342306",
+        "phone": "9784769574"
+      },
+      {
+        "name": "Kisan Krishi Seva Kendra",
+        "city": "Phalodi",
+        "address": "Village Kanasar, Phalodi - 342307",
+        "phone": "7374044177"
+      },
+      {
+        "name": "Salasar Agro Traders",
+        "city": "Phalodi",
+        "address": "Shop 2, Raikabag, Phalodi - 342301",
+        "phone": "8769239075"
+      },
+      {
+        "name": "KGN Agriculture Sales",
+        "city": "Phalodi",
+        "address": "Main Market, Dedasari, Phalodi - 342301",
+        "phone": "9928457577"
+      },
+      {
+        "name": "Tak Seed Store",
+        "city": "Jodhpur",
+        "address": "Shop 6, Subzi Mandi, Pipar City - 342601",
+        "phone": "9414611887"
+      },
+      {
+        "name": "Bhavya Beej Bhandar",
+        "city": "Hanumangarh",
+        "address": "Main Chogan, Nohar - 335523",
+        "phone": "7297997855"
+      },
+      {
+        "name": "Godara Agro Agency",
+        "city": "Bikaner",
+        "address": "Ward 9, Bambloo, Bikaner - 334022",
+        "phone": "9001356167"
+      },
+      {
+        "name": "Haryali Khad Beej Agency",
+        "city": "Bikaner",
+        "address": "New Anaj Mandi, Sri Ganganagar Road, Bikaner - 334001",
+        "phone": "9414484636"
+      },
+      {
+        "name": "Sudarshan Agro Sales",
+        "city": "Pali",
+        "address": "New Bus Stand, Nimbol, Pali - 306308",
+        "phone": "9414464910"
+      },
+      {
+        "name": "Chamunda Krishi Kendra",
+        "city": "Pali",
+        "address": "Jaitran Road, Nimaj, Pali - 306303",
+        "phone": "9166079230"
+      },
+      {
+        "name": "Shri Navrang Khad Beej Bhandar",
+        "city": "Churu",
+        "address": "Near Railway Station, Sardarshahar - 331403",
+        "phone": "8890550130"
+      },
+      {
+        "name": "Mahadev Agro Sales",
+        "city": "Phalodi",
+        "address": "Lohawat Main Chauraha, Palli, Phalodi - 342302",
+        "phone": "7426992813"
+      }
+    ],
+
+    "default": [
+      {
+        "name": "MASCO NuAg Customer Support",
+        "city": "India",
+        "address": "Please contact our customer support for dealer information.",
+        "phone": "1800-XXX-XXXX"
+      }
+    ]
   }
+}
 }
