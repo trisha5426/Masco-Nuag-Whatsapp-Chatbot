@@ -19,14 +19,14 @@ const step = session.currentStep;
   // ── Business hours check ──
   // Only show out-of-hours message once per session at main menu
   // Bot still works 24/7 — just informs user team is offline
-  if (!isBusinessHours() && step === 'main' && !session.shownOutOfHours) {
-    updatedSession.shownOutOfHours = true;
-    reply = getOutOfHoursMessage();
-    return { reply, updatedSession };
-  }
-  if (isBusinessHours()) {
-    updatedSession.shownOutOfHours = false;
-  }
+  // if (!isBusinessHours() && step === 'main' && !session.shownOutOfHours) {
+  //   updatedSession.shownOutOfHours = true;
+  //   reply = getOutOfHoursMessage();
+  //   return { reply, updatedSession };
+  // }
+  // if (isBusinessHours()) {
+  //   updatedSession.shownOutOfHours = false;
+  // }
 
   if (iLower === '00') {
     updatedSession.currentStep = 'main';
